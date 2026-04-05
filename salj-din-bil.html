@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sälj din bil | AM Auto</title>
+
+    <!-- Tailwind CSS för modern design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Library (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .sticky-nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav class="sticky-nav sticky top-0 z-50 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center text-3xl font-extrabold tracking-tighter text-white">
+                <img src="images/AM AUTO LOGO.jpg" alt="AM Auto Logo"
+                    class="h-40 w-auto mr-4 rounded-lg border border-white/10 shadow-md">
+                AM <span class="text-red-600 ml-1">AUTO</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium text-gray-300">
+                <a href="home.html" class="hover:text-red-500 transition">Hem</a>
+                <a href="salj-din-bil.html" class="text-red-600 font-bold transition">Sälj din bil</a>
+                <a href="lager.html" class="hover:text-red-500 transition">Lager</a>
+                <a href="kontakt.html" class="hover:text-red-500 transition">Kontakt</a>
+                <a href="om-oss.html" class="hover:text-red-500 transition">Om oss</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:0721768908"
+                    class="hidden sm:inline-block bg-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-800 transition shadow-lg shadow-red-900/50">
+                    Ring oss
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Slider -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-white/10 px-6 py-4 flex flex-col space-y-4 shadow-xl">
+            <a href="home.html" class="text-white text-lg font-medium hover:text-red-500 transition">Hem</a>
+            <a href="salj-din-bil.html" class="text-white text-lg font-medium hover:text-red-500 transition">Sälj din bil</a>
+            <a href="lager.html" class="text-white text-lg font-medium hover:text-red-500 transition">Lager</a>
+            <a href="kontakt.html" class="text-white text-lg font-medium hover:text-red-500 transition">Kontakt</a>
+            <a href="om-oss.html" class="text-white text-lg font-medium hover:text-red-500 transition">Om oss</a>
+            <hr class="border-white/10">
+            <a href="tel:0721768908" class="bg-red-700 text-white text-center px-4 py-3 rounded-lg font-bold hover:bg-red-800 transition shadow-lg shadow-red-900/50">Ring: 072 - 176 89 08</a>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.getElementById("mobile-menu-btn");
+            const menu = document.getElementById("mobile-menu");
+            if (btn && menu) {
+                btn.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                });
+            }
+        });
+    </script>
+
+    <!-- MAIN CONTENT -->
+    <section class="py-20 container mx-auto px-6">
+        <div class="max-w-4xl mx-auto bg-zinc-900 border border-white/5 p-10 rounded-2xl shadow-lg" data-aos="fade-up">
+            <h1 class="text-4xl font-bold mb-6 text-white text-center">Sälj din bil till oss</h1>
+            <p class="text-gray-400 text-center mb-10 text-lg">
+                Fyll i formuläret nedan så återkommer vi med en kostnadsfri värdering inom 24 timmar.
+            </p>
+
+            <form class="space-y-6" action="https://formsubmit.co/Amauto.katrineholm@gmail.com" method="POST">
+                <!-- FormSubmit Settings -->
+                <input type="hidden" name="_subject" value="Ny Värderingsförfrågan - Sälj din bil!">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-300 mb-2">Registreringsnummer</label>
+                        <input type="text" name="registration_number" placeholder="ABC 123"
+                            class="w-full p-4 bg-zinc-800 border-zinc-700 text-white border rounded-lg focus:ring-2 focus:ring-red-600 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-300 mb-2">Miltal</label>
+                        <input type="number" name="mileage" placeholder="T.ex. 12000"
+                            class="w-full p-4 bg-zinc-800 border-zinc-700 text-white border rounded-lg focus:ring-2 focus:ring-red-600 outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-300 mb-2">Nyckeluppsättning</label>
+                        <div class="flex gap-4 p-4 bg-zinc-800 border border-zinc-700 rounded-lg">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="keys" value="komplett"
+                                    class="w-4 h-4 text-red-600 focus:ring-red-600 bg-zinc-700 border-zinc-600" checked>
+                                <span class="text-white">Komplett</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="keys" value="avvikande"
+                                    class="w-4 h-4 text-red-600 focus:ring-red-600 bg-zinc-700 border-zinc-600">
+                                <span class="text-white">Avvikande</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-300 mb-2">Servicebok</label>
+                        <div class="flex gap-4 p-4 bg-zinc-800 border border-zinc-700 rounded-lg">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="service" value="komplett"
+                                    class="w-4 h-4 text-red-600 focus:ring-red-600 bg-zinc-700 border-zinc-600" checked>
+                                <span class="text-white">Komplett</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="service" value="avvikande"
+                                    class="w-4 h-4 text-red-600 focus:ring-red-600 bg-zinc-700 border-zinc-600">
+                                <span class="text-white">Avvikande</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-bold text-gray-300 mb-2">Däck</label>
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-zinc-800 border border-zinc-700 rounded-lg">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="tires" value="summer_winter"
+                                    class="w-4 h-4 text-red-600 focus:ring-red-600 bg-zinc-700 border-zinc-600" checked>
+                                <span class="text-white">Sommar & Vinterdäck</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="tires" value="summer_only"
+                                    class="w-4 h-4 text-red-600 focus:ring-red-600 bg-zinc-700 border-zinc-600">
+                                <span class="text-white">Endast sommardäck</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="tires" value="winter_only"
+                                    class="w-4 h-4 text-red-600 focus:ring-red-600 bg-zinc-700 border-zinc-600">
+                                <span class="text-white">Endast vinterdäck</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-300 mb-2">Ditt Namn</label>
+                        <input type="text" name="name" placeholder="Förnamn Efternamn"
+                            class="w-full p-4 bg-zinc-800 border-zinc-700 text-white border rounded-lg focus:ring-2 focus:ring-red-600 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-300 mb-2">Telefonnummer</label>
+                        <input type="tel" name="phone" placeholder="070 123 45 67"
+                            class="w-full p-4 bg-zinc-800 border-zinc-700 text-white border rounded-lg focus:ring-2 focus:ring-red-600 outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-300 mb-2">E-post</label>
+                    <input type="email" name="email" placeholder="namn@exempel.se"
+                        class="w-full p-4 bg-zinc-800 border-zinc-700 text-white border rounded-lg focus:ring-2 focus:ring-red-600 outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-300 mb-2">Föredraget kontaktsätt</label>
+                    <div class="flex gap-4 p-4 bg-zinc-800 border border-zinc-700 rounded-lg">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="contact_method" value="phone"
+                                class="w-4 h-4 text-red-600 focus:ring-red-600 bg-zinc-700 border-zinc-600">
+                            <span class="text-white">Telefon</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="contact_method" value="email"
+                                class="w-4 h-4 text-red-600 focus:ring-red-600 bg-zinc-700 border-zinc-600" checked>
+                            <span class="text-white">E-post</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-300 mb-2">Övrig information (utrustning, skick,
+                        etc.)</label>
+                    <textarea rows="4" name="message"
+                        class="w-full p-4 bg-zinc-800 border-zinc-700 text-white border rounded-lg focus:ring-2 focus:ring-red-600 outline-none"
+                        placeholder="Berätta mer om bilen..."></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-red-700 text-white font-bold py-4 rounded-lg text-lg hover:bg-red-800 transition shadow-lg shadow-red-900/50">Skicka
+                    intresseanmälan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-white/10 py-12 mt-auto">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1">
+                <div class="text-2xl font-bold mb-6 text-white">AM <span class="text-red-600">AUTO</span></div>
+                <p class="text-gray-400">Din partner för trygga och exklusiva bilaffärer i hjärtat av Sverige.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-white">Öppettider</h4>
+                <p class="text-gray-400">Mån-Fre: 10:00 - 19:00</p>
+                <p class="text-gray-400">Lördag: 10:00 - 17:00</p>
+                <p class="text-gray-400">Söndag: 12:00 - 17:00</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-white">Kontakt</h4>
+                <p class="text-gray-400">Marieborgsgatan 1C,641 39 katrineholm</p>
+                <p class="text-gray-400">Amauto.katrineholm@gmail.com</p>
+                <p class="text-gray-400">072 - 176 89 08</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-white">Följ oss</h4>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/am.autoab/" target="_blank"
+                        class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-900 hover:text-white transition text-gray-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@am.auto25" target="_blank"
+                        class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-900 hover:text-white transition text-gray-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.49-3.35-3.98-5.6-.48-2.28.14-4.66 1.7-6.52 1.58-1.92 4.14-3.09 6.64-3.04.05.01.07.05.07.1v4.06c-1.28-.01-2.58.46-3.53 1.34-.94.88-1.48 2.3-1.23 3.59.27 1.21 1.41 2.26 2.64 2.43 1.18.17 2.46-.23 3.32-1.06.87-.82 1.35-2.08 1.29-3.33.02-2.83.01-5.65.01-8.48.01-1.07.01-2.14.01-3.21z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright & Legal -->
+        <div
+            class="container mx-auto px-6 mt-12 pt-8 border-t border-white/10 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+            <p>&copy; 2025 AM Auto. Alla rättigheter förbehållna.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="cookies-policy.html" class="hover:text-red-600 transition">Cookiepolicy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate On Scroll) Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out'
+        });
+    </script>
+</body>
+
+</html>
