@@ -1,16 +1,20 @@
 name: Deploy website
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
 jobs:
   sftp-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         env:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-      
+
       - name: Deploy to One.com via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
@@ -19,5 +23,5 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           port: 22
           local_path: ./
-          remote_path: /public_html/
+          remote_path: httpd.www/
           sftp_only: true
