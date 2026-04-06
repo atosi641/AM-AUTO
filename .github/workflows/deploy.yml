@@ -3,4 +3,8 @@ name: Deploy website
 on:
   push:
     branches:
-      -
+      - main
+
+jobs:
+  sftp-deploy:
+    runs-on
