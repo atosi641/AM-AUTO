@@ -11,17 +11,4 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
-      - name: Deploy to One.com via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
-        with:
-          username: ${{ secrets.SFTP_USERNAME }}
-          server: ${{ secrets.SFTP_SERVER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          port: 22
-          local_path: ./
-          remote_path: ./
-          sftp_only: true
+        uses:
