@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# am-auto.se (no www)
+RewriteCond %{HTTP_HOST} ^www\.am-auto\.se [NC]
+RewriteRule ^(.*)$ https://am-auto\.se/$1 [L,R=301]
