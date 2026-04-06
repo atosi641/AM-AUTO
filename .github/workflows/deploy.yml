@@ -6,7 +6,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
@@ -14,6 +15,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          local_path: ./*
-          remote_path: httpd.www/
-          delete_remote: true  # Tar bort gamla filer
+          local_path: ./*  # Alla filer från ditt repo (koder, bilder)
+          remote_path: httpd.www/  # one.com:s publika mapp (index.html här)
+          delete_remote_files: true  # Rensar gamla filer först!
+          sftpArgs: '-o ConnectTimeout=5'  # Snabbare timeout
