@@ -1,21 +1,18 @@
-name: Deploy to one.com
+name: Auto-synka antigravity
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
-        with:
-          username: ${{ secrets.FTP_USERNAME }}
-          server: ${{ secrets.FTP_SERVER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          local_path: ./*  # Alla filer från ditt repo (koder, bilder)
-          remote_path: httpd.www/  # one.com:s publika mapp (index.html här)
-          delete_remote_files: true  # Rensar gamla filer först!
-          sftpArgs: '-o ConnectTimeout=5'  # Snabbare timeout
+    - uses: actions/checkout@v4
+    - uses: burnett01/rsync-deployments@7.1.0
+      with:
+        switches: -avzr --delete
+        path: antigravity/
+        remote_path: /files/
+        remote_host: ${{ secrets.REMOTE_HOST }}
+        remote_user: ${{ secrets.REMOTE_USER }}
+        remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
