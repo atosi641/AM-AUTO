@@ -1,3 +1,12 @@
-name: Deploy till one.com
+name: Auto-synka antigravity
 on:
-  push
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Deploy till one
