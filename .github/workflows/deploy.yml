@@ -1,11 +1,2 @@
-name: Auto-synka antigravity
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: burnett01/rsync-deployments
+SSH_PRIVATE_KEY: -----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACCRkGDSOvfEVNVcapzPzlet
