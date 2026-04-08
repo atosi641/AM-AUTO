@@ -7,6 +7,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout code
       uses: actions/checkout@v4
-    - name: Deploy till one
+    - name: Rsync till one.com
+      uses: burnett01/rsync-deployments@v7.1.0
+      with:
+        switches: -avzr --delete
+        path: antigravity/
+        remote_path: /files/
+        remote_host
