@@ -6,12 +6,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # Fixar Node 20-varning nu
     steps:
-    - uses: actions/checkout@v5  # Uppdaterad till Node 24-kompatibel [web:9]
-    
-    - uses: burnett01/rsync-deployments@7.1.0  # Behålls - fungerar perfekt
+    - uses: actions/checkout@v4
+    - uses: burnett01/rsync-deployments@7.1.0
       with:
         switches: -avzr --delete
         path: antigravity/
@@ -19,3 +16,4 @@ jobs:
         remote_host: ${{ secrets.REMOTE_HOST }}
         remote_user: ${{ secrets.REMOTE_USER }}
         remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        remote_port: ${{ secrets.REMOTE_PORT }}
