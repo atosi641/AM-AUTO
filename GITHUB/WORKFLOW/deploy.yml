@@ -1,0 +1,21 @@
+name: Deploy am-auto.se
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Sync till one.com
+      uses: burnett01/rsync-deployments@master
+      with:
+        switches: -avzr --delete
+        path: antigravity/
+        remote_path: /files/
+        remote_host: ${{ secrets.REMOTE_HOST }}
+        remote_user: ${{ secrets.REMOTE_USER }}
+        remote_port: ${{ secrets.REMOTE_PORT }}
+        remote_key: ${{ secrets.SSH_PRIVATE_KEY }}

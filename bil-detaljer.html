@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildetaljer | AM Auto</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav class="sticky-nav sticky top-0 z-50 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center text-3xl font-extrabold tracking-tighter text-white">
+                <img src="images/am auto logo.jpg" alt="AM Auto Logo"
+                    class="h-40 w-auto mr-4 rounded-lg border border-white/10 shadow-md">
+                AM <span class="text-red-600 ml-1">AUTO</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium text-gray-300">
+                <a href="home.html" class="hover:text-red-500 transition">Hem</a>
+                <a href="salj-din-bil.html" class="hover:text-red-500 transition">Sälj din bil</a>
+                <a href="lager.html" class="hover:text-red-500 transition">Lager</a>
+                <a href="kontakt.html" class="hover:text-red-500 transition">Kontakt</a>
+                <a href="om-oss.html" class="hover:text-red-500 transition">Om oss</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:0721768908"
+                    class="hidden sm:inline-block bg-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-800 transition shadow-lg shadow-red-900/50">
+                    Ring oss
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Slider -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-white/10 px-6 py-4 flex flex-col space-y-4 shadow-xl">
+            <a href="home.html" class="text-white text-lg font-medium hover:text-red-500 transition">Hem</a>
+            <a href="salj-din-bil.html" class="text-white text-lg font-medium hover:text-red-500 transition">Sälj din bil</a>
+            <a href="lager.html" class="text-white text-lg font-medium hover:text-red-500 transition">Lager</a>
+            <a href="kontakt.html" class="text-white text-lg font-medium hover:text-red-500 transition">Kontakt</a>
+            <a href="om-oss.html" class="text-white text-lg font-medium hover:text-red-500 transition">Om oss</a>
+            <hr class="border-white/10">
+            <a href="tel:0721768908" class="bg-red-700 text-white text-center px-4 py-3 rounded-lg font-bold hover:bg-red-800 transition shadow-lg shadow-red-900/50">Ring: 072 - 176 89 08</a>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.getElementById("mobile-menu-btn");
+            const menu = document.getElementById("mobile-menu");
+            if (btn && menu) {
+                btn.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                });
+            }
+        });
+    </script>
+
+    <!-- CAR DETAILS SECTION -->
+    <section class="py-20 container mx-auto px-6 min-h-screen">
+        <a href="javascript:history.back()" class="text-gray-400 hover:text-white mb-8 inline-block">← Tillbaka</a>
+
+        <div id="car-content" class="grid grid-cols-1 lg:grid-cols-2 gap-12 hidden">
+            <!-- Image Side -->
+            <div data-aos="fade-right">
+                <div class="relative group">
+                    <div
+                        class="bg-zinc-800 rounded-2xl overflow-hidden shadow-2xl border border-white/5 w-full flex items-center justify-center mb-6 relative">
+                        <img id="car-image" src="" alt="Car Image" class="w-full h-auto object-contain">
+
+                        <!-- Navigation Arrows -->
+                        <button id="prev-btn"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100">
+                            &#10094;
+                        </button>
+                        <button id="next-btn"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100">
+                            &#10095;
+                        </button>
+                    </div>
+                </div>
+                <!-- Thumbnails -->
+                <div id="thumbnails" class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+                    <!-- Thumbnails will be injected here -->
+                </div>
+            </div>
+
+            <!-- Details Side -->
+            <div data-aos="fade-left">
+                <h1 id="car-title" class="text-4xl md:text-5xl font-bold mb-4">Laddar...</h1>
+                <p id="car-price" class="text-3xl font-bold text-red-500 mb-8">...</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-8 text-gray-300">
+                    <div class="bg-zinc-900 p-4 rounded-lg border border-white/5">
+                        <span class="block text-xs text-gray-500 uppercase">Växellåda</span>
+                        <span id="car-gearbox" class="font-bold text-lg">-</span>
+                    </div>
+                    <div class="bg-zinc-900 p-4 rounded-lg border border-white/5">
+                        <span class="block text-xs text-gray-500 uppercase">Drivmedel</span>
+                        <span id="car-fuel" class="font-bold text-lg">-</span>
+                    </div>
+                    <div class="bg-zinc-900 p-4 rounded-lg border border-white/5">
+                        <span class="block text-xs text-gray-500 uppercase">Miltal</span>
+                        <span class="font-bold text-lg">28 082 mil</span> <!-- Placeholder or generic -->
+                    </div>
+                    <div class="bg-zinc-900 p-4 rounded-lg border border-white/5">
+                        <span class="block text-xs text-gray-500 uppercase">Årsmodell</span>
+                        <span class="font-bold text-lg">2012</span> <!-- Placeholder or generic -->
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-bold mb-4">Beskrivning</h3>
+                <p id="car-description" class="text-gray-400 leading-relaxed mb-10">
+                    En fantastisk bil som kombinerar komfort och prestanda.
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-4">
+                    <a href="kontakt.html"
+                        class="flex-1 bg-red-700 hover:bg-red-800 text-white text-center px-8 py-4 rounded-lg font-bold transition">
+                        Kontakta säljare
+                    </a>
+                    <a href="tel:0721768908"
+                        class="flex-1 bg-white hover:bg-gray-100 text-black text-center px-8 py-4 rounded-lg font-bold transition">
+                        Ring 072 - 176 89 08
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="error-message" class="text-center py-20 hidden">
+            <h2 class="text-2xl font-bold mb-4">Hoppsan! Vi hittade inte bilen.</h2>
+            <a href="home.html" class="text-red-500 hover:underline">Gå tillbaka till startsidan</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 AM Auto. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Car Data Database
+                const cars = {
+            'volkswagen-tiguan': {
+                title: 'Volkswagen Tiguan',
+                price: '69 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Manuell',
+                images: [
+                    'images/VT 1.avif', 'images/VT 2.avif', 'images/VT 3.avif', 'images/VT 4.avif',
+                    'images/VT 5.avif', 'images/VT 6.avif', 'images/VT 7.avif', 'images/VT 8.avif',
+                    'images/VT 9.avif', 'images/VT 10.avif', 'images/VT 11.avif', 'images/VT 12.avif',
+                    'images/VT 13.avif', 'images/VT 14.avif', 'images/VT 15.avif', 'images/VT 16.avif',
+                    'images/VT 17.avif'
+                ],
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volkswagen Tiguan R-Line – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>4Motion<br>Bluetooth<br>Sensorer<br>Dragkrok<br>Navigation<br>Parkera av sig själv<br>R-Line sportstolar<br>R-Line sportratt<br>Farthållare<br>Xenon<br>Färddator<br>AUX<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Skatt: 3918kr/år<br>Blandad förbrukning: 6.3L / 100 km<br>Besiktad fram tills - 2027-05-31<br>Sommar & vinterdäck på fälg<br>Komplett servicehistorik<br>Komplett nyckelsats<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            }
+        };
+
+        // Logic to populate page
+        const urlParams = new URLSearchParams(window.location.search);
+        const carId = urlParams.get('id');
+
+        if (carId && cars[carId]) {
+            const car = cars[carId];
+            document.getElementById('car-title').innerText = car.title;
+            document.getElementById('car-price').innerText = car.price;
+            document.getElementById('car-fuel').innerText = car.fuel;
+            document.getElementById('car-gearbox').innerText = car.gearbox;
+            document.getElementById('car-description').innerHTML = car.description;
+
+            // Image Gallery Logic
+            const mainImage = document.getElementById('car-image');
+            const thumbnailsContainer = document.getElementById('thumbnails');
+
+            // Set initial main image
+            mainImage.src = car.images[0];
+            mainImage.alt = car.title;
+
+            // Clear previous thumbnails
+            thumbnailsContainer.innerHTML = '';
+
+            if (car.images.length > 1) {
+                let currentImageIndex = 0;
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+
+                const updateGallery = (index) => {
+                    currentImageIndex = index;
+                    mainImage.src = car.images[currentImageIndex];
+
+                    // Update thumbnails active state
+                    Array.from(thumbnailsContainer.children).forEach((t, i) => {
+                        t.classList.toggle('border-red-600', i === currentImageIndex);
+
+                        // Scroll thumbnail into view if needed
+                        if (i === currentImageIndex) {
+                            t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                        }
+                    });
+                };
+
+                // Arrow interactions
+                prevBtn.onclick = () => {
+                    let newIndex = currentImageIndex - 1;
+                    if (newIndex < 0) newIndex = car.images.length - 1;
+                    updateGallery(newIndex);
+                };
+
+                nextBtn.onclick = () => {
+                    let newIndex = currentImageIndex + 1;
+                    if (newIndex >= car.images.length) newIndex = 0;
+                    updateGallery(newIndex);
+                };
+
+                car.images.forEach((imgSrc, index) => {
+                    const thumb = document.createElement('img');
+                    thumb.src = imgSrc;
+                    thumb.className = 'w-24 h-24 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-red-600 transition flex-shrink-0';
+                    if (index === 0) thumb.classList.add('border-red-600');
+
+                    thumb.onclick = () => {
+                        updateGallery(index);
+                    };
+                    thumbnailsContainer.appendChild(thumb);
+                });
+            } else {
+                // Hide arrows if only one image
+                document.getElementById('prev-btn').style.display = 'none';
+                document.getElementById('next-btn').style.display = 'none';
+            }
+
+            // Show content
+            document.getElementById('car-content').classList.remove('hidden');
+        } else {
+            // Show error
+            document.getElementById('error-message').classList.remove('hidden');
+        }
+    </script>
+</body>
+
+</html>
