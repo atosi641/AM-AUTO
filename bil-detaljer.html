@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sv">
 
 <head>
@@ -187,113 +187,13 @@
 
         // Car Data Database
         const cars = {
-            'bmw-520d': {
-                title: 'BMW 520d',
-                price: '79 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automat',
-                images: [
-                    'images/', 'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/'
-                ],
-                description: 'Nyinkommen BMW 520d – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både första bil och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Interiörlist svart högglans<br>AUX<br>Bluetooth<br>Framsensorer<br>Keyless<br>Xenonljus<br>Baksensorer<br>Isofix<br>Farthållare<br>Automat<br>Tonade rutor<br>Ac<br><br><strong>Övrigt -</strong><br>Skatt: 2458kr/år<br>Blandad förbrukning: 5.2 / 100 km<br>Besiktad fram tills - 2026-03-31<br>Sommar & vinterdäck på fälg<br>Komplett servicehistorik'
-
-            },
-            'chevrolet-captiva': {
-                title: 'Chevrolet Captiva',
-                price: '64 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                images: [
-                    'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/',
-                    'images/'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen 7-sitsig Chevrolet Captiva – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Skinnstolar<br>AUX<br>Bluetooth<br>AWD<br>Dragkrok<br>7-sits<br>Multifunktionsratt<br>Tonade rutor<br>Baksensorer<br>Isofix<br>Farthållare<br>Automat<br>Ac<br><br>Skatt: 5900kr/år<br>Blandad förbrukning: 7.7 / 100 km<br>Besiktad fram tills - 2027-03-31<br>Sommar & vinterdäck<br>Komplett servicehistorik<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-            'volvo-xc60': {
-                title: 'Volvo XC60',
-                price: '149 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                images: [
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volvo XC60 D5 Polestar 2014 –<br>230 hästkrafter med Polestar-optimering ger en sportig men trygg körupplevelse. Fyrhjulsdriven stabilitet, lyxig komfort och Volvos välkända säkerhet i ett snyggt och praktiskt SUV-paket. En bil som levererar både körglädje och vardagslyx. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till 6-36 månaders garanti för en trygg affär!<br><br><strong>Följande Utrustning -</strong><br>Polestar - optimerad<br>AWD<br>Panorama<br>Keyless<br>Kompass<br>Navigation<br>Eluppvärmd Vindruta<br>Premium Sound Högtalare<br>El-bagagelucka<br>Elstolar<br>Backkamera<br>Bak & Fram Sensorer<br>Dieselvärmare<br>Isofix<br>Dragkrok<br>Multifunktionsratt<br>Automat<br>Adaptiv Farthållare<br>Avbländande yttre backspeglar<br>Skinnstolar<br>Ac<br><br><strong>Övrigt -</strong><br>Skatt: 4127kr/år<br>Blandad förbrukning: 6.4L / 100 km<br>Besiktad fram tills - 2027-03-31<br>Sommar & vinterdäck på fälg<br>Komplett servicehistorik<br>Komplett nyckelsats'
-            },
-            'citroen-ds5': {
-                title: 'Citroen DS5',
-                price: '79 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                images: [
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Citroën DS5 – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Keyless<br>Start / Stopp<br>Panorama<br>Backkamera<br>Läderinteriör<br>Navigation<br>Bluetooth<br>Fram & Bak sensorer<br>Tonade rutor<br>Isofix<br>Farthållare<br>AUX<br>Ac<br><br>Skatt: 1259kr/år<br>Blandad förbrukning: 4.3 / 100 km<br>Besiktad fram tills - 2026-12-31<br>Sitter friktionsdäck på<br>Komplett servicehistorik<br>Komplett nyckelsats<br>Endast 1 privat ägare<br>Kamrem precis bytt & nyligen servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-            'volkswagen-passat': {
-                title: 'Volkswagen Passat',
-                price: '69 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                images: [
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volkswagen Passat R-Line – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till 6-36 månaders garanti för en trygg affär!<br><br><strong>Följande Utrustning -</strong><br>R-Line<br>4-Motion<br>Bluetooth<br>Xenon<br>Backkamera<br>Bak & Fram Sensorer<br>Dieselvärmare - Tidur<br>Isofix<br>Dragkrok<br>Multifunktionsratt<br>Automat<br>Skinnstolar<br>Ac<br><br>Skatt: 3084kr/år<br>Blandad förbrukning: 5.7L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar & vinterdäck<br>Komplett servicehistorik<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-            'toyota-yaris': {
-                title: 'Toyota Yaris',
-                price: '59 700 kr',
-                fuel: 'Bensin',
-                gearbox: 'Automatisk',
-                images: [
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Toyota Yaris – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till 6-36 månaders garanti för en trygg affär!<br><br><strong>Följande Utrustning -</strong><br>AUX<br>Isofix<br>Motorvärmare<br>Växelpaddlar<br>Multifunktionsratt<br>Automat<br>Kupéfläkt<br>Tonade rutor<br>Digital hastighetsmätare<br>Ac<br><br>Skatt: 536kr/år<br>Blandad förbrukning: 5.1L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar & vinterdäck<br>Komplett servicehistorik<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-            'kia-sportage': {
-                title: 'Kia Sportage',
-                price: '69 700 kr',
+            'volkswagen-tiguan': {
+                title: 'Volkswagen Tiguan',
+                price: 'Ring för pris',
                 fuel: 'Diesel',
                 gearbox: 'Manuell',
-                images: [
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Kia Sportage – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Dragkrok<br>Bluetooth<br>Motorvärmare<br>Kupéfläkt<br>6-växlad<br>Baksensorer<br>Tonade rutor<br>Isofix<br>Farthållare<br>AUX<br>Sätesvärme bak & fram<br>Ac<br><br>Skatt: 2563kr/år<br>Blandad förbrukning: 5.3 / 100 km<br>Besiktad fram tills - 2026-03-31<br>Sitter friktionsdäck på<br>Komplett servicehistorik<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-            'peugeot-308': {
-                title: 'Peugeot 308 SW',
-                price: '29 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Manuell',
-                images: [
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/', 'images/',
-                    'images/', 'images/', 'images/', 'images/'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Peugeot 308 SW – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama<br>Eluppvärmda Sidospeglar<br>Tonade rutor<br>Isofix<br>Farthållare<br>Ac<br><br>Skatt: 2302kr/år<br>Blandad förbrukning: 5.1 / 100 km<br>Besiktad fram tills - 2026-10-31<br>Sitter friktionsdäck på<br>Komplett servicehistorik<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+                images: Array.from({length: 17}, (_, i) => `images/VT ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volkswagen Tiguan – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>2.0 TDI DPF 4Motion R-Line<br>Dragkrok<br>Sensorer<br>Navigation<br><br><strong>Övrigt -</strong><br>Blandad förbrukning: Låg<br>Årsmodell: 2011<br>Miltal: 28 118 mil<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             }
         };
 
