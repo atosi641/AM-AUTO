@@ -1,7 +1,7 @@
 name: Auto Deploy One.com SFTP
 on:
   push:
-    branches: [ master ]
+branches: [ main ]
   workflow_dispatch:
 
 jobs:
