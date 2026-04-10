@@ -1,21 +1,22 @@
-name: Deploy ALL Files (Bilder Fix)
+name: Deploy to One.com (FIX)
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     
-    - name: Sync ALL to One.com (HTML/CSS/IMAGES)
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        protocol: sftp
-        username: ${{ secrets.SFTP_USER }}
-        password: ${{ secrets.SFTP_PASS }}
-        server: ssh.cyqbonh8m.service.one
-        server-dir: '/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/'
-        local-dir: ./
-        dangerous-clean-slate: true  # RENSAR + laddar upp ALLT!
+    - name: Install lftp
+      run: sudo apt-get update && sudo apt-get install -y lftp
+      
+    - name: Deploy ALL Files
+      run: |
+        lftp -e "
+        set sftp:auto-confirm yes;
+        open -u ${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASS }} sftp://ssh.cyqbonh8m.service.one;
+        cd '/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/';
+        mirror -R -v --delete --verbose .;
+        bye
+        " -c
