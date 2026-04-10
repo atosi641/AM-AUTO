@@ -1,7 +1,10 @@
-name: Auto Deploy One.com SFTP
+name: Auto Deploy One.com FTP
 on:
   push:
     branches: [ main, master ]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   deploy:
@@ -10,7 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       
-    - name: Deploy to One.com SFTP
+    - name: Deploy to One.com FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.cyqbonh8m.service.one
