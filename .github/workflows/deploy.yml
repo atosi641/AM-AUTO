@@ -1,13 +1,23 @@
-name: Auto Deploy One.com
+name: Auto Deploy ALL Files (No Warnings)
 on:
   push:
-    branches:
-    - main
+    branches: [ main ]
   workflow_dispatch:
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # Tar bort Node-varning!
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Test Deploy
-      run: echo "AUTO-SYNC WORKS $(date)"
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Deploy HTML/CSS/Images
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+      with:
+        username: ${{ secrets.SFTP_USER }}
+        server: ssh.cyqbonh8m.service.one
+        password: ${{ secrets.SFTP_PASS }}
+        local_path: './*'
+        remote_path: '/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/'
