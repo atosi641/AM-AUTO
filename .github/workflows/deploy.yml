@@ -1,7 +1,8 @@
-name: Auto Deploy One.com FTP
+name: Auto Deploy One.com
 on:
   push:
-    branches: [ main, master ]
+    branches: [ master ]
+  workflow_dispatch:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -10,14 +11,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
+    - name: Checkout
       uses: actions/checkout@v4
       
-    - name: Deploy to One.com FTP
+    - name: Deploy to One.com
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.am-auto.se          # ← ÄNDRA till din riktiga FTP-host!
-        username: am-auto.se            # ← Din domän som username
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
         local-dir: ./
         server-dir: ./
