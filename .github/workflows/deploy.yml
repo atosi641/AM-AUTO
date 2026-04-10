@@ -20,3 +20,7 @@ jobs:
         mirror -R -v --delete --verbose .;
         bye
         " -c
+    - name: Debug Secrets
+      run: |
+        echo "SFTP_USER exists: ${{ secrets.SFTP_USER != '' }}"
+        echo "SFTP_PASS exists: ${{ secrets.SFTP_PASS != '' }}"
