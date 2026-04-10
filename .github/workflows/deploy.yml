@@ -1,12 +1,19 @@
 name: Auto Deploy One.com SFTP
-on: [push]
+on:
+  push:
+    branches: [ main, master ]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Deploy to SFTP
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Deploy to One.com SFTP
       uses: wlixcc/SFTP-Deploy-Action@v1.2.6
       with:
         username: ${{ secrets.SFTP_USER }}
@@ -14,3 +21,4 @@ jobs:
         password: ${{ secrets.SFTP_PASS }}
         local_path: './*'
         remote_path: '/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/'
+        args: '-o StrictHostKeyChecking=no -R'
