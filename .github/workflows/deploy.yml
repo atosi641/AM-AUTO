@@ -16,8 +16,8 @@ jobs:
     - name: Deploy to One.com FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.cyqbonh8m.service.one
-        username: cyqbonh8m_ftp
+        server: ftp.am-auto.se          # ← ÄNDRA till din riktiga FTP-host!
+        username: am-auto.se            # ← Din domän som username
         password: ${{ secrets.FTP_PASS }}
         local-dir: ./
-        server-dir: /webroots/281524e/am-auto.se/
+        server-dir: ./
