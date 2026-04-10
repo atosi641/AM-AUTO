@@ -1,19 +1,18 @@
-name: Auto Deploy ALL Files (No Warnings)
+name: Perfect Deploy (No Node Warnings)
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # Tar bort Node-varning!
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Deploy HTML/CSS/Images
+    - uses: actions/checkout@v4
+    
+    - name: Deploy ALL Files
       uses: wlixcc/SFTP-Deploy-Action@v1.2.6
       with:
         username: ${{ secrets.SFTP_USER }}
