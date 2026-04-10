@@ -1,4 +1,4 @@
-name: Auto Deploy ALL (No Node Warnings)
+name: Deploy ALL Files (Bilder Fix)
 on:
   push:
     branches: [ main ]
@@ -6,18 +6,16 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # ← Fixar varning!
     steps:
     - uses: actions/checkout@v4
     
-    - name: Deploy HTML/CSS/Images/ALLT
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+    - name: Sync ALL to One.com (HTML/CSS/IMAGES)
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
+        protocol: sftp
         username: ${{ secrets.SFTP_USER }}
-        server: ssh.cyqbonh8m.service.one
         password: ${{ secrets.SFTP_PASS }}
-        local_path: ./          # ← Allt inkl mappar!
-        remote_path: '/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/'
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+        server: ssh.cyqbonh8m.service.one
+        server-dir: '/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/'
+        local-dir: ./
+        dangerous-clean-slate: true  # RENSAR + laddar upp ALLT!
