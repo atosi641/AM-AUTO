@@ -1,11 +1,8 @@
-name: Auto Deploy One.com
+name: Auto Deploy One.com SFTP
 on:
   push:
     branches: [ master ]
   workflow_dispatch:
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   deploy:
@@ -14,11 +11,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
       
-    - name: Deploy to One.com
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    - name: Deploy SFTP
+      uses: appleboy/scp-action@v1.0.0
       with:
-        server: ${{ secrets.FTP_SERVER }}
+        host: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
-        local-dir: ./
-        server-dir: ./
+        port: 22
+        source: "./*"
+        target: "/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/"
