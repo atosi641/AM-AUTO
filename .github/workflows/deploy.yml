@@ -19,3 +19,5 @@ jobs:
         password: ${{ secrets.SFTP_PASS }}
         local_path: ./          # ← Allt inkl mappar!
         remote_path: '/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/'
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
