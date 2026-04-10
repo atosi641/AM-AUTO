@@ -1,4 +1,4 @@
-name: Auto Deploy ALL (HTML/CSS/Bilder)
+name: Auto Deploy ALL (No Node Warnings)
 on:
   push:
     branches: [ main ]
@@ -6,6 +6,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # ← Fixar varning!
     steps:
     - uses: actions/checkout@v4
     
@@ -15,5 +17,5 @@ jobs:
         username: ${{ secrets.SFTP_USER }}
         server: ssh.cyqbonh8m.service.one
         password: ${{ secrets.SFTP_PASS }}
-        local_path: ./          # ← FIX! Allt inkl mappar
+        local_path: ./          # ← Allt inkl mappar!
         remote_path: '/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/'
