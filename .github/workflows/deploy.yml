@@ -1,22 +1,19 @@
-name: Perfect Deploy (No Node Warnings)
+name: Auto Deploy ALL (HTML/CSS/Bilder)
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
     - uses: actions/checkout@v4
     
-    - name: Deploy ALL Files
+    - name: Deploy HTML/CSS/Images/ALLT
       uses: wlixcc/SFTP-Deploy-Action@v1.2.6
       with:
         username: ${{ secrets.SFTP_USER }}
         server: ssh.cyqbonh8m.service.one
         password: ${{ secrets.SFTP_PASS }}
-        local_path: './*'
+        local_path: ./          # ← FIX! Allt inkl mappar
         remote_path: '/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/'
