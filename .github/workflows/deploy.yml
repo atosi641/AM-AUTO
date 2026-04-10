@@ -1,22 +1,13 @@
-name: Auto Deploy One.com SFTP
+name: Auto Deploy One.com
 on:
   push:
-branches: [ main ]
+    branches:
+    - main
   workflow_dispatch:
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Deploy SFTP
-      uses: appleboy/scp-action@v1.0.0
-      with:
-        host: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASS }}
-        port: 22
-        source: "./*"
-        target: "/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/"
+    - uses: actions/checkout@v4
+    - name: Test Deploy
+      run: echo "AUTO-SYNC WORKS $(date)"
