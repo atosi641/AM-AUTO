@@ -21,11 +21,10 @@
         }
 
         .hero-gradient {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('images/');
-            background-size: cover, contain;
-            background-repeat: no-repeat, no-repeat;
-            background-position: center, center;
+            background: url('images/hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             background-color: black;
         }
 
@@ -51,9 +50,9 @@
     <!-- NAVIGATION -->
     <nav class="sticky-nav sticky top-0 z-50 border-b border-white/10">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center text-3xl font-extrabold tracking-tighter text-white">
+            <div class="flex items-center text-2xl md:text-3xl font-extrabold tracking-tighter text-white">
                 <img src="images/am auto logo.jpg" alt="AM Auto Logo"
-                    class="h-24 w-24 object-cover mr-4 rounded-full border border-white/10 shadow-lg shadow-red-900/20">
+                    class="h-16 w-16 md:h-24 md:w-24 object-cover mr-3 md:mr-4 rounded-full border border-white/10 shadow-lg shadow-red-900/20">
                 AM <span class="text-red-600 ml-1">AUTO</span>
             </div>
             <div class="hidden md:flex space-x-8 font-medium text-gray-300">
@@ -64,7 +63,7 @@
                 <a href="om-oss.html" class="hover:text-red-500 transition">Om oss</a>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="tel:0721768908"
+                <a href="tel:+46721768908"
                     class="hidden sm:inline-block bg-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-800 transition shadow-lg shadow-red-900/50">
                     Ring oss
                 </a>
@@ -85,7 +84,7 @@
             <a href="kontakt.html" class="text-white text-lg font-medium hover:text-red-500 transition">Kontakt</a>
             <a href="om-oss.html" class="text-white text-lg font-medium hover:text-red-500 transition">Om oss</a>
             <hr class="border-white/10">
-            <a href="tel:0721768908" class="bg-red-700 text-white text-center px-4 py-3 rounded-lg font-bold hover:bg-red-800 transition shadow-lg shadow-red-900/50">Ring: 072 - 176 89 08</a>
+            <a href="tel:+46721768908" class="bg-red-700 text-white text-center px-4 py-3 rounded-lg font-bold hover:bg-red-800 transition shadow-lg shadow-red-900/50">Ring: 072 - 176 89 08</a>
         </div>
     </nav>
 
@@ -105,11 +104,7 @@
     <!-- HERO SECTION -->
     <section class="hero-gradient h-[85vh] flex items-center justify-center text-center text-white px-4">
         <div data-aos="fade-up" data-aos-duration="1000">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">Hitta din drömbil hos <br>AM Auto</h1>
-            <p class="text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
-                Vi erbjuder ett handplockat sortiment av premiumfordon med trygga garantier och snabb leverans.
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <div class="flex flex-col md:flex-row gap-4 justify-center mt-32">
                 <a href="lager.html"
                     class="bg-red-700 hover:bg-red-800 text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105">
                     Se lagerbilar
@@ -217,8 +212,8 @@
             <div>
                 <h4 class="font-bold mb-4 text-white">Kontakt</h4>
                 <p class="text-gray-400">Marieborgsgatan 1C,641 39 katrineholm</p>
-                <p class="text-gray-400">Amauto.katrineholm@gmail.com</p>
-                <p class="text-gray-400">072 - 176 89 08</p>
+                <p class="text-gray-400"><a href="mailto:Amauto.katrineholm@gmail.com" class="hover:text-red-500 transition">Amauto.katrineholm@gmail.com</a></p>
+                <p class="text-gray-400"><a href="tel:+46721768908" class="hover:text-red-500 transition">072 - 176 89 08</a></p>
             </div>
             <div>
                 <h4 class="font-bold mb-4 text-white">Följ oss</h4>
