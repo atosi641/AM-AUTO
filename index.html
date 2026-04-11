@@ -21,7 +21,8 @@
         }
 
         .hero-gradient {
-            background: url('images/hero-bg.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+                url('images/hero-bg.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -109,7 +110,11 @@
     <!-- HERO SECTION -->
     <section class="hero-gradient h-[85vh] flex items-center justify-center text-center text-white px-4">
         <div data-aos="fade-up" data-aos-duration="1000">
-            <div class="flex flex-col md:flex-row gap-4 justify-center mt-32">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Hitta din drömbil hos <br>AM Auto</h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
+                Vi erbjuder ett handplockat sortiment av premiumfordon med trygga garantier och snabb leverans.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="lager.html"
                     class="bg-red-700 hover:bg-red-800 text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105">
                     Se lagerbilar
