@@ -1,12 +1,34 @@
-name: Deploy to One.com (FIX PATH)
+name: Deploy to One.com 🚀
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+permissions:
+  contents: read
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Install lftp
-      run: sudo apt-get update && sudo apt-get
+    - name: Checkout code 🛎️
+      uses: actions/checkout@v4
+    - name: Deploy to One.com 📤
+      uses: appleboy/scp-action@v1.0.3
+      with:
+        host: ssh.cyqbonh8m.service.one
+        username: cyqbonh8m_ssh
+        password: ${{ secrets.SFTP_PASS }}
+        port: 22
+        source: "."
+        target: "/webroots/2851b24e"
+        overwrite: true
+    - name: Clear One.com cache 🧹
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ssh.cyqbonh8m.service.one
+        username: cyqbonh8m_ssh
+        password: ${{ secrets.SFTP_PASS }}
+        port: 22
+        script: |
+          cd /webroots/2851b24e
+          rm -rf .cache
+          echo "✅ Cache cleared - site live!"
