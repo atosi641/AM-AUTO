@@ -1,4 +1,4 @@
-name: Deploy to One.com (FIX)
+name: Deploy to One.com (FIX PATH)
 on:
   push:
     branches: [ main ]
@@ -9,18 +9,4 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Install lftp
-      run: sudo apt-get update && sudo apt-get install -y lftp
-      
-    - name: Deploy ALL Files
-      run: |
-        lftp -e "
-        set sftp:auto-confirm yes;
-        open -u ${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASS }} sftp://ssh.cyqbonh8m.service.one;
-        cd '/customers/9/8/9/cyqbonh8m/webroots/281524e/am-auto.se/';
-        mirror -R -v --delete --verbose .;
-        bye
-        " -c
-    - name: Debug Secrets
-      run: |
-        echo "SFTP_USER exists: ${{ secrets.SFTP_USER != '' }}"
-        echo "SFTP_PASS exists: ${{ secrets.SFTP_PASS != '' }}"
+      run: sudo apt-get update && sudo apt-get
