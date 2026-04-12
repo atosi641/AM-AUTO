@@ -1,4 +1,4 @@
-name: Deploy to One.com RSYNC
+name: Deploy to One.com
 on:
   push:
     branches: [ main ]
@@ -8,10 +8,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Deploy with rsync
-      uses: burnett01/rsync-deployments@master
+    - name: Deploy via SCP
+      uses: appleboy/scp-action@master  # @master INTE @v1.0.3!
       with:
-        remote_path: "/webroots/2851b24e/"
-        remote_host: "sftp.one.com"
-        remote_user: "DITT_ONE_COM_USERNAME"
-        remote_key: ${{ secrets.ONE_COM_PRIVATE_KEY }}
+        host: ${{ secrets.ONE_COM_HOST }}
+        username: ${{ secrets.ONE_COM_USERNAME }}
+        key: ${{ secrets.ONE_COM_SSH_KEY }}
+        port: 22
+        source: "."
+        target: "/webroots/2851b24e/"
