@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<base href="https://www.am-auto.se/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sälj din bil - AM AUTO</title>
 <style>
-body { font-family: Arial; max-width: 800px; margin: 50px auto; padding: 20px; }
-h1 { color: #d32f2f; }
-.btn { background: #1976d2; color: white; padding: 15px 30px; text-decoration: none; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:Arial,sans-serif; line-height:1.6; color:#fff; background:#000; }
+.container { max-width:1200px; margin:0 auto; padding:50px 20px; }
+h1 { color:#ff6b35; font-size:3em; text-align:center; margin-bottom:30px; }
+.form-group { margin-bottom:25px; }
+label { display:block; font-size:1.2em; margin-bottom:10px; color:#ccc; }
+input, textarea, select { width:100%; padding:15px; border:2px solid #444; 
+    background:#222; color:#fff; font-size:1.1em; border-radius:5px; }
+.btn-submit { background:#ff6b35; color:#fff; padding:20px 50px; font-size:1.3em; 
+    border:none; border-radius:5px; cursor:pointer; display:block; margin:40px auto; }
 </style>
 </head>
 <body>
-<h1>Sälj din Porsche till AM AUTO</h1>
-<p>Vi köper alla Porsche-modeller - Högsta pris!</p>
+<div class="container">
+<h1>💰 Sälj din Porsche till oss!</h1>
+<p style="text-align:center; font-size:1.3em; margin-bottom:50px;">
+Få bästa pris på din Porsche inom 24h!</p>
+
 <form>
-<input type="text" placeholder="Modell & årgång" style="width:100%; padding
+<div class="form-group">
+<label>Märke:</label>
+<select><option>Porsche</option><option>BMW M</option><option>Audi RS</option></select>
+</div>
+<div class="form-group">
+<label>Modell:</label>
+<input type="text" placeholder="911 Carrera, Panamera, Cayenne...">
+</div>
+<div class="form-group">
+<label>Årsmodell:</label>
+<input type="number" placeholder="2020">
+</div>
+<div class="form-group">
+<label>Mil:</label>
+<input type="number" placeholder="25,000 km">
+</div>
+<div class="form-group">
+<label>Beskrivning:</label>
+<textarea rows="6" placeholder="Servicehistorik, tillval..."></textarea>
+</div>
+<button type="submit" class="btn-submit">FÅ ERBJUDANDE NU! 🚀</button>
+</form>
+</div>
+</body>
+</html>

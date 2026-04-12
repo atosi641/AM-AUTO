@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<base href="https://www.am-auto.se/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AM AUTO Porsche</title>
-<link rel="stylesheet" href="css/style.css">
+<title>AM AUTO - Porsche Specialist</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:Arial,sans-serif; line-height:1.6; color:#333; background:#000; }
+.hero { background:#111; color:#fff; text-align:center; padding:100px 20px; }
+.hero h1 { font-size:3em; margin-bottom:20px; color:#ff6b35; }
+.btn { display:inline-block; background:#ff6b35; color:#fff; padding:15px 30px; 
+       text-decoration:none; border-radius:5px; font-weight:bold; margin:10px; }
+.content { max-width:1200px; margin:0 auto; padding:50px 20px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); 
+        gap:30px; margin-top:50px; }
+.card { background:#222; color:#fff; padding:30px; border-radius:10px; 
+        text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.5); }
+</style>
 </head>
 <body>
 <div class="hero">
-<img src="hero-bg.png" alt="Porsche AM AUTO" class="hero-bg">
+<h1>🏎️ AM AUTO</h1>
+<p>Porsche Specialist i Sverige</p>
+<a href="salj-din-bil.html" class="btn">SÄLJ DIN BIL</a>
+<a href="lager.html" class="btn">VÅRT LAGER</a>
 </div>
-<main>
-<h1>Välkommen till AM AUTO</h1>
-<p>Porsche specialist i Sverige</p>
-<a href="/salj-din-bil.html">Sälj din bil</a>
-</main>
-<footer>
-<p>&copy; 2026 AM AUTO</p>
-</footer>
+<div class="content">
+<div class="grid">
+<div class="card"><h2>🔧 Service</h2><p>Komplett Porsche-service</p></div>
+<div class="card"><h2>📞 Kontakt</h2><p>070-123 45 67</p></div>
+<div class="card"><h2>⭐ Om Oss</h2><p>20 års Porsche-erfarenhet</p></div>
+</div>
+</div>
 </body>
 </html>
-
-
