@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sälj din bil - AM AUTO Porsche Specialist</title>
+<meta name="description" content="Få bästa pris på din Porsche inom 24h! AM AUTO köper alla Porsche-modeller. Gratis värdering online.">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sälj din bil - AM AUTO Porsche Specialist</title>
+<meta name="description" content="Få bästa pris på din Porsche inom 24h! AM AUTO köper alla Porsche-modeller. Gratis värdering online.">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:Arial,sans-serif; line-height:1.6; color:#fff; background:linear-gradient(135deg,#000 0%,#1a1a1a 100%); min-height:100vh; }
+.container { max-width:1200px; margin:0 auto; padding:50px 20px; text-align:center; }
+h1 { color:#ff6b35; font-size:3.5em; margin-bottom:20px; text-shadow:2px 2px 4px rgba(0,0,0,0.8); }
+.subtitle { font-size:1.4em; margin-bottom:50px; color:#ccc; }
+.form-group { margin-bottom:25px; max-width:600px; margin-left:auto; margin-right:auto; text-align:left; }
+label { display:block; font-size:1.2em; margin-bottom:10px; color:#ff6b35; font-weight:bold; }
+input, textarea, select { width:100%; padding:18px; border:2px solid #444; background:#222; color:#fff; font-size:1.1em; border-radius:8px; transition:all 0.3s; }
+input:focus, textarea:focus, select:focus { border-color:#ff6b35; outline:none; box-shadow:0 0 15px rgba(255,107,53,0.3); }
+.btn-submit { background:linear-gradient(45deg,#ff6b35,#ff8e53); color:#fff; padding:25px 60px; font-size:1.5em; border:none; border-radius:50px; cursor:pointer; display:block; margin:50px auto; font-weight:bold; transition:all 0.3s; box-shadow:0 10px 30px rgba(255,107,53,0.4); }
+.btn-submit:hover { transform:translateY(-3px); box-shadow:0 15px 40px rgba(255,107,53,0.6); }
+.features { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; margin-top:80px; }
+.feature { background:#222; padding:30px; border-radius:15px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.5); }
+.feature h3 { color:#ff6b35; margin-bottom:15px; font-size:1.5em; }
+@media (max-width:768px) { h1 { font-size:2.5em; } .btn-submit { padding:20px 40px; font-size:1.2em; } }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>💰 Sälj din Porsche till oss!</h1>
+<p class="subtitle">Få bästa pris inom 24 timmar - Gratis värdering online</p>
+
+<form action="/contact" method="post">
+<div class="form-group">
+<label>🚗 Märke:</label>
+<select>
+<option>Porsche 911</option>
+<option>Porsche Cayenne</option>
+<option>Porsche Panamera</option>
+<option>Porsche Macan</option>
+<option>BMW M-serie</option>
+<option>Audi RS</option>
+<option>Annat premium</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Modell:</label>
+<input type="text" placeholder="Ex: 911 Carrera 4S, Cayenne Turbo..." required>
+</div>
+
+<div class="form-group">
+<label>Årsmodell:</label>
+<input type="number" placeholder="2020" min="1990" max="2026" required>
+</div>
+
+<div class="form-group">
+<label>Mil:</label>
+<input type="number" placeholder="45,000 km" required>
+</div>
+
+<div class="form-group">
+<label>Beskrivning & tillval:</label>
+<textarea rows="6" placeholder="Servicehistorik, originalrör, PDK, keramikbromsar, sportavgas..."></textarea>
+</div>
+
+<button type="submit" class="btn-submit">FÅ DITT ERBJUDANDE NU! ⚡</button>
+</form>
+
+<div class="features">
+<div class="feature">
+<h3>⭐ Snabbt</h3>
+<p>Erbjudande inom 24h</p>
+</div>
+<div class="feature">
+<h3>💸 Bästa pris</h3>
+<p>Marknadsledande utbetalning</p>
+</div>
+<div class="feature">
+<h3>🚚 Hämtning</h3>
+<p>Gratis hämtning i hela Sverige</p>
+</div>
+</div>
+</div>
+</body>
+</html>
