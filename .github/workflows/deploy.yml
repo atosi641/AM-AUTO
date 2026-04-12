@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    
     - name: Deploy to One.com
       uses: RostiMelk/one.com-deployer@master
       env:
         ONE_DOMAIN_NAME: am-auto.se
         ONE_SSH_KEY_PUBLIC: ${{ secrets.ONE_SSH_KEY_PUBLIC }}
         ONE_SSH_KEY_PRIVATE: ${{ secrets.ONE_SSH_KEY_PRIVATE }}
+        TPO_SRC_PATH: "."
