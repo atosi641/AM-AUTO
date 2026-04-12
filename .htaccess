@@ -1,0 +1,9 @@
+# Anti-Cache One.com Varnish
+Header add "Cache-Control" "no-cache, no-store, must-revalidate"
+Header add "Pragma" "no-cache"
+Header add "Expires" "0"
+
+# File permissions
+<FilesMatch "\.(html|htm)$">
+  ForceType "text/html"
+</FilesMatch>
