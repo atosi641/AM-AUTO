@@ -1,5 +1,5 @@
 name: Deploy to One.com
-on: 
+on:
   push:
     branches: [ main ]
 jobs:
@@ -7,17 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    
-    - name: Remove .git (fix permission denied)
-      run: rm -rf .git
-    
     - name: Deploy to One.com
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        source: "."
-        target: "/webroots/2851b24e"
-        overwrite: true
+      uses: RostiMelk/one.com-deployer@master
+      env:
+        ONE_DOMAIN_NAME: am-auto.se
+        ONE_SSH_KEY_PUBLIC: ${{ secrets.ONE_SSH_KEY_PUBLIC }}
+        ONE_SSH_KEY_PRIVATE: ${{ secrets.ONE_SSH_KEY_PRIVATE }}
