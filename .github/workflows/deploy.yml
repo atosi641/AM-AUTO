@@ -1,19 +1,23 @@
 name: Deploy to One.com
+
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Deploy via SCP
-      uses: appleboy/scp-action@master  # @master INTE @v1.0.3!
-      with:
-        host: ${{ secrets.ONE_COM_HOST }}
-        username: ${{ secrets.ONE_COM_USERNAME }}
-        key: ${{ secrets.ONE_COM_SSH_KEY }}
-        port: 22
-        source: "."
-        target: "/webroots/2851b24e/"
+      # 1. Klona ditt repo
+      - uses: actions/checkout@v4
+
+      # 2. Deploy via SFTP/SCP till One.com
+      - name: Deploy
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ 
