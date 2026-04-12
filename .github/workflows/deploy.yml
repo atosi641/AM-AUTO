@@ -1,4 +1,4 @@
-name: Deploy to One.com
+name: Deploy to One.com RSYNC
 on:
   push:
     branches: [ main ]
@@ -8,10 +8,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Deploy to One.com
-      uses: RostiMelk/one.com-deployer@master
-      env:
-        ONE_DOMAIN_NAME: am-auto.se
-        ONE_SSH_KEY_PUBLIC: ${{ secrets.ONE_SSH_KEY_PUBLIC }}
-        ONE_SSH_KEY_PRIVATE: ${{ secrets.ONE_SSH_KEY_PRIVATE }}
-        TPO_SRC_PATH: "."
+    - name: Deploy with rsync
+      uses: burnett01/rsync-deployments@master
+      with:
+        remote_path: "/webroots/2851b24e/"
+        remote_host: "sftp.one.com"
+        remote_user: "DITT_ONE_COM_USERNAME"
+        remote_key: ${{ secrets.ONE_COM_PRIVATE_KEY }}
