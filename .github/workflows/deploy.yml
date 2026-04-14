@@ -10,14 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Klona ditt repo
       - uses: actions/checkout@v4
 
-      # 2. Deploy via SFTP/SCP till One.com
       - name: Deploy
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          port: ${{ 
+          port: ${{ secrets.PORT }}
+          source: "AM AUTO/*"
+          target: "/webroots/2851b24e"
+          overwrite: true
