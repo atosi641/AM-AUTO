@@ -12,6 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: List files
+        run: |
+          pwd
+          ls -la
+          ls -la "AM AUTO"
+
       - name: Deploy
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -22,3 +28,4 @@ jobs:
           source: "AM AUTO/*"
           target: "/webroots/2851b24e"
           overwrite: true
+          debug: true
