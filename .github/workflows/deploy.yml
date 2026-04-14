@@ -12,11 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: List files
-        run: |
-          pwd
-          ls -la
-
       - name: Deploy
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -24,7 +19,21 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "*"
+          source: |
+            index.html
+            home.html
+            kontakt.html
+            lager.html
+            om-oss.html
+            salj-din-bil.html
+            bil-detaljer.html
+            cookies-policy.html
+            purge.php
+            .htaccess
+            css/**
+            images/**
+            README.md
           target: "/webroots/2851b24e"
           overwrite: true
           debug: true
+          strip_components: 0
