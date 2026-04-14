@@ -1,9 +1,10 @@
-name: Deploy to One.com
+name: Deploy to One.com 🚀
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -28,12 +29,9 @@ jobs:
             salj-din-bil.html
             bil-detaljer.html
             cookies-policy.html
-            purge.php
             .htaccess
             css/**
             images/**
-            README.md
-          target: "/webroots/2851b24e"
+          target: "/webroots/2851b24e/www"
           overwrite: true
-          debug: true
           strip_components: 0
