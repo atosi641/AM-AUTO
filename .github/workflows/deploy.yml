@@ -22,6 +22,6 @@ jobs:
           password: ${{ secrets.SFTP_PASS }}
           port: 22
           source: "index.html,home.html,kontakt.html,lager.html,om-oss.html,salj-din-bil.html,bil-detaljer.html,cookies-policy.html,.htaccess,css,images"
-          target: "/webroots/2851b24e/www"
+          target: "/webroots/2851b24e"
           overwrite: true
           strip_components: 0
