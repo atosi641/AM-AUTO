@@ -14,6 +14,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Check server directory structure
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ssh.cyqbonh8m.service.one
+          username: cyqbonh8m_ssh
+          password: ${{ secrets.SFTP_PASS }}
+          port: 22
+          script: |
+            echo "=== ROOT ==="
+            ls -la /webroots/2851b24e/
+            echo "=== SUBFOLDERS ==="
+            ls -la /webroots/2851b24e/ | grep "^d"
+
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
