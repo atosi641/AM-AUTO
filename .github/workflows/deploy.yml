@@ -16,10 +16,10 @@ jobs:
       - name: Deploy
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
+          host: ssh.cyqbonh8m.service.one
+          username: cyqbonh8m_ssh
+          password: ${{ secrets.SFTP_PASS }}
+          port: 22
           source: |
             index.html
             home.html
