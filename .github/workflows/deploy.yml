@@ -27,4 +27,16 @@ jobs:
           source: "."
           target: "/webroots/2851b24e"
           overwrite: true
-          strip_components: 0
+          strip_components: 1
+
+      - name: Clear Varnish cache 🧹
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ssh.cyqbonh8m.service.one
+          username: cyqbonh8m_ssh
+          password: ${{ secrets.SFTP_PASS }}
+          port: 22
+          script: |
+            rm -rf /webroots/2851b24e/.cache
+            find /webroots/2851b24e -name "*.cache" -delete
+            echo "✅ Cache cleared"
