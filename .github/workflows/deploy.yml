@@ -29,7 +29,7 @@ jobs:
           overwrite: true
           strip_components: 1
 
-      - name: Clear Varnish cache 🧹
+      - name: Find files and clear cache
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ssh.cyqbonh8m.service.one
@@ -37,6 +37,14 @@ jobs:
           password: ${{ secrets.SFTP_PASS }}
           port: 22
           script: |
-            rm -rf /webroots/2851b24e/.cache
-            find /webroots/2851b24e -name "*.cache" -delete
-            echo "✅ Cache cleared"
+            echo "=== WHERE IS INDEX.HTML? ==="
+            find /webroots/2851b24e -name "index.html" 2>/dev/null
+            echo "=== ROOT CONTENTS ==="
+            ls -la /webroots/2851b24e/
+            echo "=== HOME DIR ==="
+            ls -la ~/
+            echo "=== PWD ==="
+            pwd
+            echo "=== CLEAR CACHE ==="
+            rm -rf /webroots/2851b24e/.cache 2>/dev/null
+            echo "Done"
