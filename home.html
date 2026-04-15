@@ -250,9 +250,37 @@
         </div>
     </footer>
 
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-zinc-900 border-t border-red-700 p-4 md:p-6 z-[100] transform transition-transform duration-500 translate-y-full flex flex-col md:flex-row items-center justify-between gap-4 shadow-2xl">
+        <div class="text-gray-300 text-sm md:text-base flex-1">
+            <p>Vi använder cookies för att förbättra din upplevelse, analysera trafik och anpassa innehåll. Genom att fortsätta använda sidan godkänner du vår <a href="cookies-policy.html" class="text-red-500 hover:text-red-400 underline">cookiepolicy</a>.</p>
+        </div>
+        <div class="flex gap-4">
+            <button id="accept-cookies" class="bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-lg font-bold transition whitespace-nowrap shadow-lg shadow-red-900/50">Jag förstår</button>
+        </div>
+    </div>
+
     <!-- AOS (Animate On Scroll) Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('accept-cookies');
+            
+            // Check if user has already accepted
+            if (!localStorage.getItem('cookiesAccepted')) {
+                // Show banner after a slight delay
+                setTimeout(() => {
+                    cookieBanner.classList.remove('translate-y-full');
+                }, 500);
+            }
+
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.add('translate-y-full');
+            });
+        });
+
         // Initiera animationerna
         AOS.init({
             duration: 800, // Hur lång tid animationen tar (ms)
