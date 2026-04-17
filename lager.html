@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sv">
 
 <head>
@@ -101,19 +101,24 @@
     </section>
 
     <!-- FILTER / SEARCH BAR -->
-    <div class="container mx-auto px-6 -mt-8 relative z-10 mb-12">
+    <div class="container mx-auto px-6 -mt-8 relative z-10 mb-4">
         <div class="bg-zinc-900 border border-white/5 p-6 rounded-2xl shadow-xl flex flex-wrap gap-4 items-end"
             data-aos="fade-up">
-            <div class="flex-1 min-w-[200px]">
-                <label class="block text-sm font-semibold mb-2 text-gray-300">Märke</label>
+            <div class="flex-1 min-w-[180px]">
+                <label class="block text-sm font-semibold mb-2 text-gray-300">M&#228;rke</label>
                 <select id="filter-brand"
                     class="w-full p-3 bg-zinc-800 border-zinc-700 text-white border rounded-lg focus:ring-2 focus:ring-red-600 outline-none">
-                    <option value="">Alla märken</option>
-                    <option value="Citroen">Citroën</option>
+                    <option value="">Alla m&#228;rken</option>
+                    <option value="Citroen">Citro&#235;n</option>
                     <option value="Opel">Opel</option>
                     <option value="Volvo">Volvo</option>
                     <option value="Mazda">Mazda</option>
                 </select>
+            </div>
+            <div class="flex-1 min-w-[180px]">
+                <label class="block text-sm font-semibold mb-2 text-gray-300">Maxpris (kr)</label>
+                <input id="filter-price" type="number" placeholder="T.ex. 150 000"
+                    class="w-full p-3 bg-zinc-800 border-zinc-700 text-white border rounded-lg focus:ring-2 focus:ring-red-600 outline-none">
             </div>
             <button id="filter-btn"
                 class="bg-red-700 text-white px-10 py-3 rounded-lg font-bold hover:bg-red-800 transition w-full md:w-auto">
@@ -122,9 +127,35 @@
         </div>
     </div>
 
+    <!-- ACTIVE FILTER BANNER -->
+    <div id="active-filter-bar" class="container mx-auto px-6 mb-8 hidden">
+        <div class="bg-zinc-800 border border-red-700/40 rounded-xl px-5 py-3 flex items-center justify-between gap-4">
+            <span id="active-filter-text" class="text-gray-300 text-sm font-medium"></span>
+            <button id="clear-filter-btn"
+                class="flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white text-sm font-bold px-4 py-2 rounded-lg transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+                Avbryt filter
+            </button>
+        </div>
+    </div>
+
     <!-- CAR LISTINGS -->
     <section class="py-10 container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- No Results Message -->
+        <div id="no-results" class="hidden text-center py-20" data-aos="fade-up">
+            <div class="bg-zinc-900 border border-white/5 rounded-3xl p-10 max-w-xl mx-auto shadow-2xl">
+                <div class="text-6xl mb-6">🔍</div>
+                <h2 class="text-3xl font-bold mb-4 text-white">Inga bilar matchar din s\u00f6kning</h2>
+                <p class="text-gray-400 mb-8 text-lg">Hittade du inte det du s\u00f6kte? Prova att \u00e4ndra dina filter eller kontakta oss s\u00e5 hj\u00e4lper vi dig hitta r\u00e4tt bil.</p>
+                <button onclick="document.getElementById('clear-filter-btn').click()" class="bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-xl font-bold transition shadow-lg shadow-red-900/40">
+                    Nollst\u00e4ll filter
+                </button>
+            </div>
+        </div>
+
+        <div id="car-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- 2. Citroen C3 -->
             <div class="car-card bg-zinc-900 rounded-2xl overflow-hidden shadow-sm border border-white/5"
                 data-aos="fade-up" data-aos-delay="200" data-brand="Citroen" data-price="59700">
@@ -270,52 +301,70 @@
     </footer>
 
     <!-- AOS (Animate On Scroll) Library JS -->
+    <!-- AOS (Animate On Scroll) Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            easing: 'ease-in-out'
-        });
+        AOS.init({ duration: 800, once: true, easing: 'ease-in-out' });
+
+        const filterBar   = document.getElementById('active-filter-bar');
+        const filterText  = document.getElementById('active-filter-text');
+        const clearBtn    = document.getElementById('clear-filter-btn');
+        const noResults   = document.getElementById('no-results');
+        const carGrid     = document.getElementById('car-grid');
 
         const filterCars = () => {
-            const brand = document.getElementById('filter-brand').value.toLowerCase();
-            const price = parseFloat(document.getElementById('filter-price').value) || Infinity;
-            const cars = document.querySelectorAll('.car-card');
+            const brandVal = document.getElementById('filter-brand').value;
+            const priceVal = document.getElementById('filter-price').value;
+            const brand    = brandVal.toLowerCase();
+            const price    = parseFloat(priceVal) || Infinity;
+            const cars     = document.querySelectorAll('.car-card');
+            let   anyVisible = false;
 
             cars.forEach(car => {
-                const carBrand = car.getAttribute('data-brand').toLowerCase();
-                const carPrice = parseFloat(car.getAttribute('data-price'));
-
-                let matchesBrand = !brand || carBrand === brand;
-                let matchesPrice = carPrice <= price;
-
-                if (matchesBrand && matchesPrice) {
-                    car.style.display = 'block';
-                } else {
-                    car.style.display = 'none';
-                }
+                const carBrand  = car.getAttribute('data-brand').toLowerCase();
+                const carPrice  = parseFloat(car.getAttribute('data-price'));
+                const matches   = (!brand || carBrand === brand) && carPrice <= price;
+                car.style.display = matches ? 'block' : 'none';
+                if (matches) anyVisible = true;
             });
+
+            // Toggle grid / no-results message
+            carGrid.style.display = anyVisible ? 'grid' : 'none';
+            noResults.classList.toggle('hidden', anyVisible);
+
+            // Show / update active filter banner
+            const isFiltered = brandVal !== '' || priceVal !== '';
+            if (isFiltered) {
+                let parts = [];
+                if (brandVal) parts.push('M\u00e4rke: ' + document.querySelector('#filter-brand option:checked').text);
+                if (priceVal) parts.push('Maxpris: ' + Number(priceVal).toLocaleString('sv-SE') + ' kr');
+                filterText.textContent = 'Aktivt filter \u2014 ' + parts.join(' | ');
+                filterBar.classList.remove('hidden');
+            } else {
+                filterBar.classList.add('hidden');
+            }
         };
 
         document.getElementById('filter-btn').addEventListener('click', filterCars);
 
+        clearBtn.addEventListener('click', () => {
+            document.getElementById('filter-brand').value = '';
+            document.getElementById('filter-price').value = '';
+            document.querySelectorAll('.car-card').forEach(c => c.style.display = 'block');
+            carGrid.style.display = 'grid';
+            noResults.classList.add('hidden');
+            filterBar.classList.add('hidden');
+            // Clear URL params without reload
+            history.replaceState({}, '', window.location.pathname);
+        });
+
         // Pre-fill from URL params
-        const urlParams = new URLSearchParams(window.location.search);
+        const urlParams  = new URLSearchParams(window.location.search);
         const paramBrand = urlParams.get('brand');
         const paramPrice = urlParams.get('maxPrice');
-
-        if (paramBrand) {
-            document.getElementById('filter-brand').value = paramBrand;
-        }
-        if (paramPrice) {
-            document.getElementById('filter-price').value = paramPrice;
-        }
-
-        // Run filter initially if params exist
-        if (paramBrand || paramPrice) {
-            filterCars();
-        }
+        if (paramBrand) document.getElementById('filter-brand').value = paramBrand;
+        if (paramPrice) document.getElementById('filter-price').value = paramPrice;
+        if (paramBrand || paramPrice) filterCars();
     </script>
 </body>
 
