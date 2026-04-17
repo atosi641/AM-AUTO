@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sv">
 
 <head>
@@ -109,22 +109,11 @@
                 <select id="filter-brand"
                     class="w-full p-3 bg-zinc-800 border-zinc-700 text-white border rounded-lg focus:ring-2 focus:ring-red-600 outline-none">
                     <option value="">Alla märken</option>
+                    <option value="Citroen">Citroën</option>
+                    <option value="Opel">Opel</option>
                     <option value="Volvo">Volvo</option>
-                    <option value="BMW">BMW</option>
-                    <option value="Audi">Audi</option>
-                    <option value="Mercedes-Benz">Mercedes-Benz</option>
-                    <option value="Chevrolet">Chevrolet</option>
-                    <option value="Citroen">Citroen</option>
-                    <option value="Volkswagen">Volkswagen</option>
-                    <option value="Toyota">Toyota</option>
-                    <option value="Kia">Kia</option>
-                    <option value="Peugeot">Peugeot</option>
+                    <option value="Mazda">Mazda</option>
                 </select>
-            </div>
-            <div class="flex-1 min-w-[200px]">
-                <label class="block text-sm font-semibold mb-2 text-gray-300">Maxpris</label>
-                <input id="filter-price" type="number" placeholder="T.ex. 300 000 kr"
-                    class="w-full p-3 bg-zinc-800 border-zinc-700 text-white border rounded-lg focus:ring-2 focus:ring-red-600 outline-none">
             </div>
             <button id="filter-btn"
                 class="bg-red-700 text-white px-10 py-3 rounded-lg font-bold hover:bg-red-800 transition w-full md:w-auto">
@@ -159,28 +148,6 @@
                 </div>
             </div>
 
-            <!-- 3. Audi A4 -->
-            <div class="car-card bg-zinc-900 rounded-2xl overflow-hidden shadow-sm border border-white/5"
-                data-aos="fade-up" data-aos-delay="300" data-brand="Audi" data-price="99700">
-                <div class="h-80 overflow-hidden bg-zinc-800 flex items-center justify-center">
-                    <img src="images/a4 1.avif" alt="Audi A4" class="w-full h-full object-contain">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-2">Audi A4 <span
-                            class="text-base font-normal text-gray-400">2.0 TDI Quattro S-Line - Drag</span></h3>
-                    <p class="text-gray-400 mb-4">Diesel • Automat • 2014 • 20 693 mil</p>
-                    <div class="flex justify-between items-end">
-                        <div>
-                            <div class="text-2xl font-bold text-red-500">99 700 kr</div>
-                        </div>
-                        <img src="images/bank logo.jpg" alt="Finansiering" class="h-12 object-contain hidden">
-                    </div>
-                    <hr class="my-4 border-zinc-700">
-                    <a href="bil-detaljer.html?id=audi-a4"
-                        class="block text-center w-full py-3 bg-zinc-800 text-white font-bold rounded-lg hover:bg-zinc-700 transition">Läs
-                        mer</a>
-                </div>
-            </div>
 
             <!-- 4. Opel Corsa -->
             <div class="car-card bg-zinc-900 rounded-2xl overflow-hidden shadow-sm border border-white/5"
@@ -224,6 +191,29 @@
                     <hr class="my-4 border-zinc-700">
                     <a href="bil-detaljer.html?id=volvo-v40"
                         class="block text-center w-full py-3 bg-zinc-800 text-white font-bold rounded-lg hover:bg-zinc-700 transition">Läs
+                        mer</a>
+                </div>
+            </div>
+
+            <!-- Mazda CX-3 -->
+            <div class="car-card bg-zinc-900 rounded-2xl overflow-hidden shadow-sm border border-white/5"
+                data-aos="fade-up" data-aos-delay="100" data-brand="Mazda" data-price="174700">
+                <div class="h-80 overflow-hidden bg-zinc-800 flex items-center justify-center">
+                    <img src="images/CX3 1.avif" alt="Mazda CX-3" class="w-full h-full object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Mazda CX-3 <span
+                            class="text-base font-normal text-gray-400">2.0 - Head-Up / Bose / Navigation</span></h3>
+                    <p class="text-gray-400 mb-4">Bensin &#x2022; Automat &#x2022; 2019 &#x2022; 8 024 mil</p>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <div class="text-2xl font-bold text-red-500">174 700 kr</div>
+                        </div>
+                        <img src="images/bank logo.jpg" alt="Finansiering" class="h-12 object-contain hidden">
+                    </div>
+                    <hr class="my-4 border-zinc-700">
+                    <a href="bil-detaljer.html?id=mazda-cx3"
+                        class="block text-center w-full py-3 bg-zinc-800 text-white font-bold rounded-lg hover:bg-zinc-700 transition">L&#228;s
                         mer</a>
                 </div>
             </div>
