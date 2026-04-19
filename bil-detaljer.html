@@ -4,7 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bildetaljer | AM Auto</title>
+    <title>Bildetaljer | Begagnade Bilar i Katrineholm | AM Auto</title>
+    <meta name="description" content="Se detaljerad information, bilder och specifikationer för våra begagnade bilar hos AM Auto i Katrineholm.">
+    <meta name="keywords" content="bilinformation, bilspecifikationer, begagnade bilar, Katrineholm">
+    <link rel="canonical" href="https://amauto.se/bil-detaljer.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amauto.se/bil-detaljer.html">
+    <meta property="og:title" content="Bildetaljer | AM Auto">
+    <meta property="og:description" content="Se detaljerad info om våra premiumbilar.">
+    <meta property="og:image" content="https://amauto.se/images/am%20auto%20logo.jpg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -252,6 +262,38 @@
             document.getElementById('car-year').innerText = car.year;
             document.getElementById('car-mileage').innerText = car.mileage;
             document.getElementById('car-description').innerHTML = car.description;
+
+            // SEO: Update Title and Meta Description dynamically
+            document.title = `${car.title} | Begagnad Bil i Katrineholm | AM Auto`;
+            
+            // SEO: Inject JSON-LD Car Schema
+            const schemaData = {
+                "@context": "https://schema.org",
+                "@type": "Car",
+                "name": car.title,
+                "image": `https://amauto.se/${car.images[0]}`,
+                "description": car.description.replace(/<[^>]*>?/gm, ''),
+                "brand": {
+                    "@type": "Brand",
+                    "name": car.title.split(' ')[0]
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "url": window.location.href,
+                    "priceCurrency": "SEK",
+                    "price": car.price.replace(/\s|[a-z]/gi, ''),
+                    "itemCondition": "https://schema.org/UsedCondition",
+                    "availability": "https://schema.org/InStock",
+                    "seller": {
+                        "@type": "LocalBusiness",
+                        "name": "AM Auto"
+                    }
+                }
+            };
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.text = JSON.stringify(schemaData);
+            document.head.appendChild(script);
 
             // Image Gallery Logic
             const mainImage = document.getElementById('car-image');
