@@ -140,11 +140,11 @@
                     </div>
                     <div class="bg-zinc-900 p-4 rounded-lg border border-white/5">
                         <span class="block text-xs text-gray-500 uppercase">Miltal</span>
-                        <span class="font-bold text-lg">28 082 mil</span> <!-- Placeholder or generic -->
+                        <span id="car-mileage" class="font-bold text-lg">-</span>
                     </div>
                     <div class="bg-zinc-900 p-4 rounded-lg border border-white/5">
                         <span class="block text-xs text-gray-500 uppercase">Årsmodell</span>
-                        <span class="font-bold text-lg">2012</span> <!-- Placeholder or generic -->
+                        <span id="car-year" class="font-bold text-lg">-</span>
                     </div>
                 </div>
 
@@ -191,7 +191,9 @@
                 title: 'Volkswagen Golf R 2.0 TSI 4Motion',
                 price: '239 700 kr',
                 fuel: 'Bensin',
-                gearbox: 'Automat',
+                gearbox: 'Automatisk',
+                year: '2016',
+                mileage: '15 204 mil',
                 images: Array.from({length: 25}, (_, i) => `images/VG ${i+1}.avif`),
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Upplev kraften i en ikon! Denna Golf R levererar hela 300 hästkrafter med imponerande precision och fyrhjulsdrift som ger dig maximal kontroll i alla lägen. Perfekt för både vardag och adrenalinfyllda körningar. Snabb, stilren och fullutrustad - En bil som verkligen sticker ut. <br><br>Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Forge Insug <br>Forge Turbovärmeskydd <br>Front Assist <br>Park Pilot <br>Panorama <br>Kamera<br>Apple CarPlay <br>Stora Touch skärmen <br>Sensorer Fram & Bak <br>Keyless Go<br>Bluetooth <br>4 Motion <br>Adaptiv farthållare <br>Skinnstolar <br>Maxton<br>Sportvinge <br>Navi<br>Isofix <br>Ac<br><br><strong>Övrigt -</strong><br>Miltal: 15 204 mil<br>Årsmodell: 2016<br>Skatt: 1416kr/år<br>Blandad förbrukning: 7.1L / 100 km<br>Besiktad fram tills - 2026-06-30<br>Komplett servicehistorik<br>Komplett nyckelsats <br>Nya Michelin Pilot Sport 4s däck <br>Nya bromsar runt om <br>Precis Servad <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
@@ -200,6 +202,8 @@
                 price: '59 700 kr',
                 fuel: 'Diesel',
                 gearbox: 'Manuell',
+                year: '2015',
+                mileage: '16 344 mil',
                 images: Array.from({length: 20}, (_, i) => `images/c3 ${i+1}.avif`),
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Citroën C3 1.6 HDI – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Start / Stopp<br>Panorama<br>Sensorer <br>Bluetooth <br>Navigation <br>Apple CarPlay<br>Färddator <br>Farthållare <br>AUX<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Miltal: 16 344 mil<br>Årsmodell: 2015<br>Skatt: 1103kr/år<br>Blandad förbrukning: 3.2L / 100 km<br>Besiktad fram tills - 2027-03-31<br>Sommar & vinterdäck <br>Komplett servicehistorik<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
@@ -207,7 +211,9 @@
                 title: 'Opel Corsa',
                 price: '64 700 kr',
                 fuel: 'Bensin',
-                gearbox: 'Automat',
+                gearbox: 'Automatisk',
+                year: '2011',
+                mileage: '8 573 mil',
                 images: Array.from({length: 18}, (_, i) => `images/OP ${i+1}.avif`),
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Opel Corsa – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Backkamera <br>Sensorer <br>Dragkrok<br>Rattvärmare <br>AUX<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Miltal: 8 573 mil<br>Årsmodell: 2011<br>Skatt: 536kr/år<br>Blandad förbrukning: 5.1L / 100 km<br>Besiktad fram tills - 2027-05-31<br>Sitter friktionsdäck på<br>Komplett servicehistorik<br>Komplett nyckelsats <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
@@ -216,6 +222,8 @@
                 price: '74 700 kr',
                 fuel: 'Diesel',
                 gearbox: 'Manuell',
+                year: '2014',
+                mileage: '25 489 mil',
                 images: Array.from({length: 19}, (_, i) => `images/v40 ${i+1}.avif`),
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volvo V40 D2 – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama <br>Tonade rutor <br>Navigation <br>Parkera av sig själv <br>Sensorer <br>El stolar<br>Bluetooth <br>AUX<br>Keyless <br>Multifunktionsratt <br>Xenon<br>Farthållare<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Miltal: 25 489 mil<br>Årsmodell: 2014<br>Skatt: 1103kr/år<br>Blandad förbrukning: 3.4L / 100 km<br>Besiktad fram tills - 2027-03-31<br>Sommar & vinterdäck på fälg<br>Komplett servicehistorik<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
@@ -223,7 +231,9 @@
                 title: 'Mazda CX-3 2.0',
                 price: '174 700 kr',
                 fuel: 'Bensin',
-                gearbox: 'Automat',
+                gearbox: 'Automatisk',
+                year: '2019',
+                mileage: '8 024 mil',
                 images: Array.from({length: 22}, (_, i) => `images/CX3 ${i+1}.avif`),
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Mazda CX-3 2.0 – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Head-Up display <br>Backkamera <br>Start / Stopp<br>Autobroms<br>Rattvärme<br>Touch-/ Pekskärm <br>Bose högtalarsystem <br>Sensorer <br>Bluetooth <br>Navigation <br>Färddator <br>Farthållare <br>AUX<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Miltal: 8 024 mil<br>Årsmodell: 2019<br>Skatt: 998kr/år<br>Blandad förbrukning: 6.6L / 100 km<br>Besiktad fram tills - 2026-10-31<br>Sommar &amp; vinterdäck på fälg<br>Komplett servicehistorik<br>Komplett nyckelsats <br>Ny servad <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             }
@@ -239,6 +249,8 @@
             document.getElementById('car-price').innerText = car.price;
             document.getElementById('car-fuel').innerText = car.fuel;
             document.getElementById('car-gearbox').innerText = car.gearbox;
+            document.getElementById('car-year').innerText = car.year;
+            document.getElementById('car-mileage').innerText = car.mileage;
             document.getElementById('car-description').innerHTML = car.description;
 
             // Image Gallery Logic
