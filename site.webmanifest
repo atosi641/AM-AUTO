@@ -1,0 +1,21 @@
+{
+  "name": "AM Auto",
+  "short_name": "AM Auto",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#b91c1c",
+  "description": "Din trygga bilhandlare i Katrineholm",
+  "icons": [
+    {
+      "src": "images/am auto logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "images/am auto logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

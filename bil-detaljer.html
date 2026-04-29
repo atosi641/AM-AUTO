@@ -7,14 +7,14 @@
     <title>Bildetaljer | Begagnade Bilar i Katrineholm | AM Auto</title>
     <meta name="description" content="Se detaljerad information, bilder och specifikationer för våra begagnade bilar hos AM Auto i Katrineholm.">
     <meta name="keywords" content="bilinformation, bilspecifikationer, begagnade bilar, Katrineholm">
-    <link rel="canonical" href="https://amauto.se/bil-detaljer.html">
+    <link rel="canonical" href="https://am-auto.se/bil-detaljer.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://amauto.se/bil-detaljer.html">
+    <meta property="og:url" content="https://am-auto.se/bil-detaljer.html">
     <meta property="og:title" content="Bildetaljer | AM Auto">
     <meta property="og:description" content="Se detaljerad info om våra premiumbilar.">
-    <meta property="og:image" content="https://amauto.se/images/am%20auto%20logo.jpg">
+    <meta property="og:image" content="https://am-auto.se/images/am%20auto%20logo.jpg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -61,7 +61,7 @@
                 AM <span class="text-red-600 ml-1">AUTO</span>
             </div>
             <div class="hidden md:flex space-x-8 font-medium text-gray-300">
-                <a href="home.html" class="hover:text-red-500 transition">Hem</a>
+                <a href="index.html" class="hover:text-red-500 transition">Hem</a>
                 <a href="salj-din-bil.html" class="hover:text-red-500 transition">Sälj din bil</a>
                 <a href="lager.html" class="hover:text-red-500 transition">Lager</a>
                 <a href="kontakt.html" class="hover:text-red-500 transition">Kontakt</a>
@@ -83,7 +83,7 @@
         </div>
         <!-- Mobile Menu Slider -->
         <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-white/10 px-6 py-4 flex flex-col space-y-4 shadow-xl">
-            <a href="home.html" class="text-white text-lg font-medium hover:text-red-500 transition">Hem</a>
+            <a href="index.html" class="text-white text-lg font-medium hover:text-red-500 transition">Hem</a>
             <a href="salj-din-bil.html" class="text-white text-lg font-medium hover:text-red-500 transition">Sälj din bil</a>
             <a href="lager.html" class="text-white text-lg font-medium hover:text-red-500 transition">Lager</a>
             <a href="kontakt.html" class="text-white text-lg font-medium hover:text-red-500 transition">Kontakt</a>
@@ -179,7 +179,7 @@
         <!-- Error State -->
         <div id="error-message" class="text-center py-20 hidden">
             <h2 class="text-2xl font-bold mb-4">Hoppsan! Vi hittade inte bilen.</h2>
-            <a href="home.html" class="text-red-500 hover:underline">Gå tillbaka till startsidan</a>
+            <a href="index.html" class="text-red-500 hover:underline">Gå tillbaka till startsidan</a>
         </div>
     </section>
 
@@ -197,6 +197,16 @@
 
         // Car Data Database
         const cars = {
+            'vw-passat-2014': {
+                title: 'Volkswagen Passat Variant 2.0 TDI DPF 4Motion',
+                price: '69 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Manuell',
+                year: '2014',
+                mileage: '18 984 mil',
+                images: Array.from({length: 17}, (_, i) => `images/WP S ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volkswagen Passat – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Backkamera <br>4Motion <br>Dragkrok <br>Dieselvärmare / Tidur <br>Bluetooth <br>Färddator <br>Farthållare <br>AUX<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Miltal: 18 984 mil<br>Årsmodell: 2014<br>Skatt: 2563kr/år<br>Blandad förbrukning: 5.3L / 100 km<br>Besiktad fram tills - 2027-06-30<br>Sommar & vinterdäck på fälg<br>Komplett servicehistorik<br>Komplett nyckelsats <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            },
             'vw-golf-r-2016': {
                 title: 'Volkswagen Golf R 2.0 TSI 4Motion',
                 price: '239 700 kr',
@@ -261,7 +271,7 @@
                 "@context": "https://schema.org",
                 "@type": "Car",
                 "name": car.title,
-                "image": `https://amauto.se/${car.images[0]}`,
+                "image": `https://am-auto.se/${car.images[0]}`,
                 "description": car.description.replace(/<[^>]*>?/gm, ''),
                 "brand": {
                     "@type": "Brand",
