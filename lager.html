@@ -184,6 +184,14 @@
 
     <!-- CAR LISTINGS -->
     <section class="py-10 container mx-auto px-6">
+        <!-- Antal bilar i lager status -->
+        <div class="mb-8 flex items-center justify-between border-b border-white/10 pb-4" data-aos="fade-up">
+            <div class="flex items-center gap-3">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+                <span id="car-count-text" class="text-gray-400 font-semibold tracking-wide text-sm uppercase">Laddar antal bilar...</span>
+            </div>
+        </div>
+
         <!-- No Results Message -->
         <div id="no-results" class="hidden text-center py-20" data-aos="fade-up">
             <div class="bg-zinc-900 border border-white/5 rounded-3xl p-10 max-w-xl mx-auto shadow-2xl">
@@ -470,6 +478,19 @@
         const noResults   = document.getElementById('no-results');
         const carGrid     = document.getElementById('car-grid');
 
+        const updateCarCount = () => {
+            const totalCars = document.querySelectorAll('#car-grid .car-card').length;
+            const visibleCars = Array.from(document.querySelectorAll('#car-grid .car-card')).filter(car => car.style.display !== 'none').length;
+            const countTextEl = document.getElementById('car-count-text');
+            if (countTextEl) {
+                if (visibleCars === totalCars) {
+                    countTextEl.innerHTML = `Just nu: <span class="text-white font-bold">${totalCars}</span> bilar i lager`;
+                } else {
+                    countTextEl.innerHTML = `Hittade <span class="text-red-500 font-bold">${visibleCars}</span> av <span class="text-white font-bold">${totalCars}</span> bilar i lager`;
+                }
+            }
+        };
+
         const filterCars = () => {
             const brandVal = document.getElementById('filter-brand').value;
             const priceVal = document.getElementById('filter-price').value;
@@ -501,6 +522,9 @@
             } else {
                 filterBar.classList.add('hidden');
             }
+
+            // Update count
+            updateCarCount();
         };
 
         document.getElementById('filter-btn').addEventListener('click', filterCars);
@@ -514,6 +538,8 @@
             filterBar.classList.add('hidden');
             // Clear URL params without reload
             history.replaceState({}, '', window.location.pathname);
+            // Update count
+            updateCarCount();
         });
 
         // Pre-fill from URL params
@@ -522,7 +548,8 @@
         const paramPrice = urlParams.get('maxPrice');
         if (paramBrand) document.getElementById('filter-brand').value = paramBrand;
         if (paramPrice) document.getElementById('filter-price').value = paramPrice;
-        if (paramBrand || paramPrice) filterCars();
+        // Always run filterCars on load to sync state and update count
+        filterCars();
     </script>
 </body>
 
