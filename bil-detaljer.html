@@ -197,6 +197,26 @@
 
         // Car Data Database
         const cars = {
+            'peugeot-3008-2016': {
+                title: 'Peugeot 3008 1.6 BlueHDi 120 8v EAT - Drag / Pano / Keyless / Sensor',
+                price: '119 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2016',
+                mileage: '22 449 mil',
+                images: Array.from({length: 20}, (_, i) => `images/P3 ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Pegeout 3008 – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama <br>Dragkrok <br>Keyless <br>Halvskinn <br>Parkeringssensorer <br>El Baggage lucka <br>MirrorScreen <br>Touch-/Pekskärm <br>Körfilsassistans <br>Döda vinkel-varnare <br>Navigation <br>Bluetooth <br>Färddator <br>Farthållare <br>AUX<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Miltal: 22 449 mil<br>Årsmodell: 2016<br>Skatt: 1103kr/år<br>Blandad förbrukning: 4.2L / 100 km<br>Besiktad fram tills - 2027-05-31<br>Sommar & Vinterdäck på fälg <br>Komplett nyckelsats <br>Komplett Servicehistorik <br>Ny Service <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            },
+            'mercedes-cla-200d-2018': {
+                title: 'Mercedes-Benz CLA 200 d Shooting Brake - AMG / Pano / Drag / HK / CarPlay',
+                price: '199 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2018',
+                mileage: '10 518 mil',
+                images: Array.from({length: 25}, (_, i) => `images/MB ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Mercedes CLA 200d Shooting Brake 2018 – en perfekt kombination av sportig design, komfort och bränslesnål dieselmotor. Elegant och rymlig kombi med premiumkänsla, automatlåda och hög utrustningsnivå. Perfekt både för stadskörning och längre resor. Välvårdad bil med snygg design som verkligen sticker ut på vägen. Körglädje och stil i ett paket! Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>AMG-Line <br>Harman / Kardon<br>Tonade rutor <br>MB Me Connect <br>Panorama <br>Dragkrok <br>Keyless <br>Skinn<br>Parkeringssensorer <br>El Baggage lucka <br>Touch-/Pekskärm <br>Apple CarPlay <br>Backkamera <br>Navigation <br>Bluetooth <br>Färddator <br>Farthållare <br>AUX<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Miltal: 10 518 mil<br>Årsmodell: 2018<br>Skatt: 1103kr/år<br>Blandad förbrukning: 5.9L / 100 km<br>Besiktad fram tills - 2026-10-31<br>Sommar & Vinterdäck på fälg <br>Komplett nyckelsats <br>Komplett Servicehistorik <br>Nya bromsar runt om<br>Ny Service <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            },
             'bmw-320d-2009': {
                 title: 'BMW 320d LCI Comfort - Dynamic',
                 price: '89 700 kr',
@@ -227,25 +247,6 @@
                 mileage: '16 344 mil',
                 images: Array.from({length: 20}, (_, i) => `images/c3 ${i+1}.avif`),
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Citroën C3 1.6 HDI – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Start / Stopp<br>Panorama<br>Sensorer <br>Bluetooth <br>Navigation <br>Apple CarPlay<br>Färddator <br>Farthållare <br>AUX<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Miltal: 16 344 mil<br>Årsmodell: 2015<br>Skatt: 1103kr/år<br>Blandad förbrukning: 3.2L / 100 km<br>Besiktad fram tills - 2027-03-31<br>Sommar & vinterdäck <br>Komplett servicehistorik<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-             'vw-polo-2011': {
-                title: 'Volkswagen Polo 5-dörrar 1.4 MPI Masters',
-                price: '49 700 kr',
-                fuel: 'Bensin',
-                gearbox: 'Manuell',
-                year: '2011',
-                mileage: '17 568 mil',
-                images: Array.from({length: 17}, (_, i) => `images/VP ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volkswagen Polo – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Färddator<br>Farthållare<br>AUX<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Skatt: 976kr/år<br>Blandad förbrukning: 5.9L / 100 km<br>Besiktad fram tills - 2026-11-30<br>Sommar & Vinterdäck på fälg<br>Komplett nyckelsats<br>Komplett Servicehistorik<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-            'suzuki-swift-2018': {
-                title: 'Suzuki Swift 1.2 Dualjet DOHC 16V VVT',
-                price: '99 700 kr',
-                fuel: 'Bensin',
-                gearbox: 'Manuell',
-                year: '2018',
-                mileage: '6 868 mil',
-                images: Array.from({length: 18}, (_, i) => `images/SS ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Suzuki Swift – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Touch-/Pekskärm<br>Dragkrok<br>Backkamera<br>Motorvärmare<br>Färddator<br>Farthållare<br>Bluetooth<br>AUX<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Skatt: 360kr/år<br>Blandad förbrukning: 5.1L / 100 km<br>Besiktad fram tills - 2027-07-31<br>Sommar & Vinterdäck på fälg<br>Komplett servicehistorik<br>Komplett nyckelsats<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             }
         };
 
