@@ -1,9 +1,17 @@
-# Anti-Cache One.com Varnish
-Header add "Cache-Control" "no-cache, no-store, must-revalidate"
-Header add "Pragma" "no-cache"
-Header add "Expires" "0"
+# Rewrite everything to https
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# File permissions
-<FilesMatch "\.(html|htm)$">
-  ForceType "text/html"
-</FilesMatch>
+# Enable HSTS (HTTP Strict Transport Security)
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# Anti-Cache One.com Varnish
+<IfModule mod_headers.c>
+    Header always set Cache-Control "no-cache, no-store, must-revalidate"
+    Header always set Pragma "no-cache"
+    Header always set Expires "0"
+</IfModule>
+

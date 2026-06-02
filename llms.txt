@@ -1,0 +1,12 @@
+# AM Auto
+
+AM Auto i Katrineholm är din trygga bilhandlare för begagnade bilar av hög kvalitet. Vi erbjuder ett handplockat sortiment av premiumbilar.
+
+## Sidor
+
+- [Hem](https://am-auto.se/): Startsidan med information om oss och länk till lager.
+- [Sälj din bil](https://am-auto.se/salj-din-bil.html): Värdera och sälj din bil till oss enkelt och tryggt.
+- [Lager](https://am-auto.se/lager.html): Vårt aktuella lager av begagnade premiumbilar i Katrineholm.
+- [Kontakt](https://am-auto.se/kontakt.html): Adress, e-post, telefonnummer och öppettider för vårt showroom.
+- [Om oss](https://am-auto.se/om-oss.html): Läs mer om vår vision, vårt kvalitetsfokus och hur vi gör bilköpet tryggt.
+- [Cookiepolicy](https://am-auto.se/cookies-policy.html): Information om hur vi använder cookies på webbplatsen.
