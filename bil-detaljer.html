@@ -292,6 +292,7 @@
             'citroen-c3': {
                 title: 'Citroën C3 1.6 HDi',
                 price: '49 700 kr',
+                originalPrice: '54 700 kr',
                 fuel: 'Diesel',
                 gearbox: 'Manuell',
                 year: '2015',
@@ -313,6 +314,7 @@
             'range-rover-sport-2020': {
                 title: 'Land Rover Range Rover Sport 3.0 SDV6 AWD HSE - Luft / Pano / Kamera / Unik',
                 price: '579 700 kr',
+                originalPrice: '600 700 kr',
                 fuel: 'Diesel',
                 gearbox: 'Automatisk',
                 year: '2020',
@@ -373,7 +375,11 @@
         if (carId && cars[carId]) {
             const car = cars[carId];
             document.getElementById('car-title').innerText = car.title;
-            document.getElementById('car-price').innerText = car.price;
+            if (car.originalPrice) {
+                document.getElementById('car-price').innerHTML = `<span class="text-xl line-through text-zinc-500 mr-3">${car.originalPrice}</span><span class="text-3xl font-bold text-red-500">${car.price}</span>`;
+            } else {
+                document.getElementById('car-price').innerText = car.price;
+            }
             document.getElementById('car-fuel').innerText = car.fuel;
             document.getElementById('car-gearbox').innerText = car.gearbox;
             document.getElementById('car-year').innerText = car.year;
