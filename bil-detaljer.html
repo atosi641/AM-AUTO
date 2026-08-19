@@ -197,6 +197,16 @@
 
         // Car Data Database
         const cars = {
+            'bmw-m3-2024': {
+                title: 'BMW M3 Competition Touring xDrive - Head-Up / Kolfiber / 700HK',
+                price: '899 700 kr',
+                fuel: 'Bensin',
+                gearbox: 'Automatisk',
+                year: '2024',
+                mileage: '4 401 mil',
+                images: Array.from({length: 25}, (_, i) => `images/M3 ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen BMW M3 G81 Touring utöver det vanliga. Den välkända M-prestandan kombineras här med 700 HK vilket ger bilen en helt annan nivå av kraft och körglädje. Samtidigt behåller den allt det som gör G81 så attraktiv – sportig design, hög komfort och imponerande praktikalitet. För dig som söker en bil med rätt kombination av prestanda, exklusivitet och användbarhet. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Steg 1 - 700 HK<br>X-Drive <br>360 kamera <br>CSL Grill<br>Gula DRL<br>H&R Sänkfjädrar <br>BMW Laserljus <br>Parkeringssensorer <br>Head Up Display <br>Harman & Kardon<br>Connected Drive Services <br>M-Performance bälten <br>M-Performance mittarmstöd<br>M-Performace stolsrygg kolfiber <br>M-Performance Sportratt <br>Apple CarPlay <br>Kolfiber interiör <br>Kolfiber Bak diffuser <br>Fram läpp <br>Navigation <br>Keyless Go<br>Farthållare <br>AUX<br>Isofix<br>Ac<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 19 966kr/år<br>Blandad förbrukning: 10.1L / 100 km<br>Levereras Nybesiktad <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br><strong>Endast tidsbokade visningar på detta fordon då det är en förmedlingsbil!</strong><br><br>Vi levererar självklart bilen hem till dig!'
+            },
             'toyota-rav4-2015': {
                 title: 'Toyota RAV4 2.0 Dual VVT-i Valvematic AWD - Drag / Kamera / Värmare',
                 price: '99 700 kr',
@@ -336,17 +346,6 @@
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi A4 2.0 TDI Quattro - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Quattro<br>Dragkrok <br>Xenon <br>Färddator <br>Farthållare <br>Isofix <br>AUX<br>Ac<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 3084kr/år<br>Blandad förbrukning: 5.8L / 100 km<br>Besiktad fram tills - 2027-09-30<br>Sommar & Vinterdäck <br>Komplett Servicehistorik <br>Komplett nyckelsats <br>Kamrem bytt<br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
 
-            'volvo-v60-2012': {
-                title: 'Volvo V60 D3 Geartronic Momentum - Automat / Drag / Värmare / BT',
-                price: '109 700 kr',
-                originalPrice: '119 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2012',
-                mileage: '15 061 mil',
-                images: Array.from({length: 20}, (_, i) => `images/V60 ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volvo V60 D3 - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Dragkrok<br>Automat <br>Parkeringssensorer <br>Tonade rutor <br>Värmare<br>Keyless<br>Färddator <br>Farthållare <br>Isofix <br>AUX<br>Ac<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 3084kr/år<br>Blandad förbrukning: 5.7L / 100 km<br>Besiktad fram tills - 2027-08-31<br>Sommar & Vinterdäck på fälg<br>Komplett Servicehistorik <br>Kamrem bytt<br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
 
             'volvo-xc70-2010': {
                 title: 'Volvo XC70 D5 AWD Geartronic Summum - Drag / Sensorer / Värmare',
