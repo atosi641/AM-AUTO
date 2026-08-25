@@ -197,6 +197,36 @@
 
         // Car Data Database
         const cars = {
+            'audi-a5-2012': {
+                title: 'Audi A5 SB 3.0 TDI V6 S Tronic Quattro - Drag / Sensorer',
+                price: '129 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2012',
+                mileage: '22 483 mil',
+                images: Array.from({length: 19}, (_, i) => `images/AA ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi A5 3.0 TDI Quattro - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Dragkrok<br>Sensorer<br>Quattro<br>Värmare<br>Farthållare<br>Färddator<br>Tonade rutor<br>Start-/Stopp<br>Få ägare<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3084kr/år<br>Blandad förbrukning: 5.7L / 100 km<br>Besiktad fram tills - 2027-10-31<br>Sommar och vinterdäck<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Ny servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            },
+            'volvo-v40-cross-country-2014': {
+                title: 'Volvo V40 Cross Country D3 Geartronic Summum - Pano / Sensorer / Navi / Keyless',
+                price: '139 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2014',
+                mileage: '15 853 mil',
+                images: ['images/V40 1.avif'],
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volvo V40 Cross Country D3 - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama<br>Bluetooth<br>Helskinn<br>Värmare<br>Sensorer<br>Navigation<br>Keyless<br>Elstol<br>Farthållare<br>Färddator<br>El speglar<br>Parkera av sig själv<br>Sätesvärme bak<br>Start-/Stopp<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2458kr/år<br>Blandad förbrukning: 5.2L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Kamrem bytt<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            },
+            'audi-rs7-2023': {
+                title: 'Audi RS7 SB - Stertman 760HK / Keramiska / Milltek / Pano',
+                price: '1 199 700 kr',
+                fuel: 'Bensin',
+                gearbox: 'Automatisk',
+                year: '2023',
+                mileage: '2 776 mil',
+                images: Array.from({length: 32}, (_, i) => `images/RS ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi RS7 utöver det vanliga.<br>760 HK från Stertman, Miltek Racekatalysatorer och en exklusiv matt satin-svart foliering vilket ger bilen ett uttryck som är både elegant och kompromisslöst. Rå prestanda, Exklusiv design. En närvaro som är svår att missa. Sveriges snyggaste RS7? Vi låter bilen tala för sig själv! Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Milltek<br>Panorama<br>Night Vision<br>Soft Close<br>Head-Up Display<br>Keramiska bromsar<br>RS Design i Rött<br>Ventilerade Säten<br>Stora Bang & Olufsen<br>Farthållare - Adaptiv<br>Parkeringssensorer<br>Bakaxelstyrning<br>Kolfiber Interiör<br>Kolfiber sidospeglar<br>Parkera av sig själv<br>Innertak i Alcantara<br>Ratt i Alcantara<br>360 kamera - 3D<br>El bagagelucka<br>Matrix Laserljus<br>Värmare - Tidur<br>Apple CarPlay<br>Belysta bälten<br>Mocha Ratt<br>Maxton Kit<br>Navigation<br>Rattvärme<br>Laptimer<br>Spacers<br>AUX<br>Isofix<br>AC<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 4320kr/år<br>Blandad förbrukning: 12.9L/ 100 km<br>Besiktad fram tills 2027-10-31<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br><strong>Endast tidsbokade visningar på detta fordon då det är en förmedlingsbil!</strong><br><br>Vi levererar självklart bilen hem till dig!'
+            },
             'ford-focus-2008': {
                 title: 'Ford Focus 5-dörrars 1.8 Flexifuel - Lågmilad / Drag / Värmare',
                 price: '29 700 kr',
