@@ -197,26 +197,6 @@
 
         // Car Data Database
         const cars = {
-            'hyundai-ix35-2011': {
-                title: 'Hyundai ix35 2.0 CRDi 4WD - Drag / Pano / Sensorer / Värmare / Skinn',
-                price: '79 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2011',
-                mileage: '18 694 mil',
-                images: [...Array.from({length: 18}, (_, i) => `images/H35 ${i+1}.avif`), 'images/H36 19.avif'],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Hyundai ix35 2.0 CRDI 4WD - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>4WD<br>Panorama<br>Dragkrok<br>Sensorer<br>Värmare<br>Keyless<br>Skinnstolar<br>Farthållare<br>Färddator<br>Tonade rutor<br>Sätesvärme bak<br>Sätesvärme fram<br>Start-/Stopp<br>Isofix<br>AUX<br>BT<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 5170kr/år<br>Blandad förbrukning: 7.2L / 100 km<br>Besiktad fram tills - 2027-10-31<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Nya bromsar<br>Ny servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-            'audi-q7-2011': {
-                title: 'Audi Q7 3.0 TDI V6 Quattro S-Line 7-Sits - Drag/Pano/BOSE/Navi',
-                price: '159 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2011',
-                mileage: '20 567 mil',
-                images: Array.from({length: 27}, (_, i) => `images/Q7 ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi Q7 3.0 TDI Quattro - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>S-Line<br>7-Sits<br>Panorama<br>Dragkrok<br>Sensorer<br>Navigation<br>Quattro<br>BOSE<br>Elstolar<br>Farthållare<br>Färddator<br>Sportratt<br>Sportstolar<br>El bagagelucka<br>Tonade rutor<br>Start-/Stopp<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 5482kr/år<br>Blandad förbrukning: 7.4L / 100 km<br>Besiktad fram tills - 2027-03-31<br>Sommar och vinterdäck<br>Komplett Servicehistorik<br>Nya bromsar<br>Ny servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
             'volvo-s60-2011': {
                 title: 'Volvo S60 D5 Geartronic Momentum - Drag / Värmare / Sensorer',
                 price: '109 700 kr',
@@ -247,16 +227,6 @@
                 images: ['images/V40 1.avif'],
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volvo V40 Cross Country D3 - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama<br>Bluetooth<br>Helskinn<br>Värmare<br>Sensorer<br>Navigation<br>Keyless<br>Elstol<br>Farthållare<br>Färddator<br>El speglar<br>Parkera av sig själv<br>Sätesvärme bak<br>Start-/Stopp<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2458kr/år<br>Blandad förbrukning: 5.2L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Kamrem bytt<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
-            'audi-rs7-2023': {
-                title: 'Audi RS7 SB - Stertman 760HK / Keramiska / Milltek / Pano',
-                price: '1 199 700 kr',
-                fuel: 'Bensin',
-                gearbox: 'Automatisk',
-                year: '2023',
-                mileage: '2 776 mil',
-                images: Array.from({length: 32}, (_, i) => `images/RS ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi RS7 utöver det vanliga.<br>760 HK från Stertman, Miltek Racekatalysatorer och en exklusiv matt satin-svart foliering vilket ger bilen ett uttryck som är både elegant och kompromisslöst. Rå prestanda, Exklusiv design. En närvaro som är svår att missa. Sveriges snyggaste RS7? Vi låter bilen tala för sig själv! Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Milltek<br>Panorama<br>Night Vision<br>Soft Close<br>Head-Up Display<br>Keramiska bromsar<br>RS Design i Rött<br>Ventilerade Säten<br>Stora Bang & Olufsen<br>Farthållare - Adaptiv<br>Parkeringssensorer<br>Bakaxelstyrning<br>Kolfiber Interiör<br>Kolfiber sidospeglar<br>Parkera av sig själv<br>Innertak i Alcantara<br>Ratt i Alcantara<br>360 kamera - 3D<br>El bagagelucka<br>Matrix Laserljus<br>Värmare - Tidur<br>Apple CarPlay<br>Belysta bälten<br>Mocha Ratt<br>Maxton Kit<br>Navigation<br>Rattvärme<br>Laptimer<br>Spacers<br>AUX<br>Isofix<br>AC<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 4320kr/år<br>Blandad förbrukning: 12.9L/ 100 km<br>Besiktad fram tills 2027-10-31<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br><strong>Endast tidsbokade visningar på detta fordon då det är en förmedlingsbil!</strong><br><br>Vi levererar självklart bilen hem till dig!'
-            },
             'bmw-m3-2024': {
                 title: 'BMW M3 Competition Touring xDrive - Head-Up / Kolfiber / 700HK',
                 price: '899 700 kr',
@@ -276,16 +246,6 @@
                 mileage: '27 513 mil',
                 images: Array.from({length: 18}, (_, i) => `images/T4 ${i+1}.avif`),
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Toyota RAV 4 2.0 4WD - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>4WD<br>Dragkrok<br>Backkamera<br>Tonade rutor<br>Motorvärmare<br>El bagagelucka<br>Keyless<br>Farthållare<br>Extraljus<br>Navigation<br>Färddator<br>Isofix<br>AUX<br>Ac<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 1636kr/år<br>Blandad förbrukning: 7.2L / 100 km<br>Besiktad fram tills - 2026-12-31<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-            'porsche-macan-s-2015': {
-                title: 'Porsche Macan S Diesel PDK S Euro 6 - Pano / BOSE / Luft / Kamera',
-                price: '219 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2015',
-                mileage: '25 690 mil',
-                images: Array.from({length: 26}, (_, i) => `images/PM ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Porsche Macan S PDK 3.0 Diesel.<br>Sportig, lyxig och riktigt bekväm! En välutrustad Porsche Macan med kraftfull 3.0 dieselmotor, elegant beige interiör och den perfekta kombinationen av prestanda och komfort. En SUV som sticker ut både på vägen och i garaget.<br>Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>BOSE<br>Panorama<br>Backkamera<br>Luftfjädring<br>Navigation<br>Park Assist<br>Värmare - Tidur<br>El bagagelucka<br>Adaptiv Farthållare<br>Sensorer Fram & Bak<br>El stolar med minne<br>Utökad helläder inredning<br>Keyless<br>Bluetooth<br>Tonade Rutor<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Skatt: 3605kr/år<br>Blandad förbrukning: 6.1L / 100 km<br>Besiktad fram tills - 2027-09-30<br>Komplett servicehistorik<br>Komplett nyckelsats<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
             'bmw-m140i-2018': {
                 title: 'BMW M140i xDrive 5-dörrars M Sport - Steg 2 E40 / xHP / Sänkt',
