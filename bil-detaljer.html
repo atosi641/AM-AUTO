@@ -197,6 +197,16 @@
 
         // Car Data Database
         const cars = {
+            'mercedes-benz-a220-2015': {
+                title: 'Mercedes-Benz A 220 CDI 7G-DCT AMG Line - Pano/Kamera/Värmare/Bluetooth',
+                price: '124 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2015',
+                mileage: '21 272 mil',
+                images: Array.from({length: 24}, (_, i) => `images/A${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Mercedes-Benz A220d - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>AMG-Line<br>Panorama<br>Backkamera<br>Värmare<br>Färddator<br>Farthållare<br>Tonade rutor<br>Start-/Stopp<br>Bluetooth<br>Halvskinn<br>Sportstolar<br>Xenon<br>Isofix<br>ACC<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 1103kr/år<br>Blandad förbrukning: 4.2L / 100 km<br>Besiktad fram tills - 2027-09-30<br>Sommar & Vinterdäck<br>Komplett Servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            },
             'audi-q5-2012': {
                 title: 'Audi Q5 3.0 TDI V6 DPF Quattro S Tronic - Drag / Värmare / Sensorer',
                 price: '139 700 kr',
@@ -403,16 +413,6 @@
                 mileage: '30 304 mil',
                 images: Array.from({length: 20}, (_, i) => `images/VG ${i+1}.avif`),
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volkswagen Golf R-Line - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>R-Line <br>Sänkt <br>Dragkrok <br>Backkamera <br>Parkeringssensorer <br>Stora Touch skärmen <br>Farthållare ( Adaptiv) <br>Tonade rutor <br>Apple CarPlay <br>Navigation <br>Sportratt <br>Sportstolar <br>Paddlar <br>Start-/Stopp<br>Färddator <br>Isofix <br>AUX<br>Ac<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 1572kr/år<br>Blandad förbrukning: 4.6L / 100 km<br>Besiktad fram tills - 2027-09-30<br>Komplett Servicehistorik <br>Komplett Nyckelsats<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-            'vw-golf-r-2016': {
-                title: 'Volkswagen Golf R 2.0 TSI 4Motion - Pano / Kamera / Maxton / Skinn',
-                price: '229 700 kr',
-                fuel: 'Bensin',
-                gearbox: 'Automatisk',
-                year: '2016',
-                mileage: '15 448 mil',
-                images: Array.from({length: 27}, (_, i) => `images/GR ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Upplev kraften i en ikon! Denna Golf R levererar hela 300 hästkrafter med imponerande precision och fyrhjulsdrift som ger dig maximal kontroll i alla lägen. Perfekt för både vardag och adrenalinfyllda körningar. Snabb, stilren och fullutrustad - En bil som verkligen sticker ut.<br>Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama<br>Forge Insug<br>Forge Turbovärmeskydd<br>Stora touch skärmen<br>Sensorer fram & bak<br>Adaptiv Farthållare<br>Backkamera<br>Bluetooth<br>Apple CarPlay<br>Tonade Rutor<br>Keyless Go<br>Front Assist<br>4 Motion<br>Park Pilot<br>Skinnstolar<br>Elstolar<br>Navigation<br>Maxton<br>Isofix<br>Ac<br><br><strong>Övrigt -</strong><br>Skatt: 1416kr/år<br>Blandad förbrukning: 6.9L / 100 km<br>Besiktad fram tills - 2027-11-30<br>Komplett servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br>Nya bromsar runt om<br>Nya Michelin Pilot Sport Däck<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
             'vw-passat-sportscombi-2015': {
                 title: 'Volkswagen Passat Sportscombi 2.0 TDI DPF BMT GT - Drag/Kamera/Värmare/BT',
