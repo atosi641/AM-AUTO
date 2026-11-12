@@ -197,6 +197,17 @@
 
         // Car Data Database
         const cars = {
+            'audi-a5-2012': {
+                title: 'Audi A5 SB 3.0 TDI V6 S Tronic Quattro - Drag / Sensorer',
+                price: '109 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2012',
+                mileage: '22 483 mil',
+                images: Array.from({length: 19}, (_, i) => `images/AA ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi A5 3.0 TDI Quattro - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Dragkrok<br>Sensorer<br>Quattro<br>Värmare<br>Farthållare<br>Färddator<br>Tonade rutor<br>Start-/Stopp<br>Få ägare<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3084kr/år<br>Blandad förbrukning: 5.7L / 100 km<br>Besiktad fram tills - 2027-10-31<br>Sommar och vinterdäck<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Ny servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            },
+
             'peugeot-508-2011': {
                 title: 'Peugeot 508 SW 1.6 e-HDi 110 FAP 8v EGS - Drag / Pano / Sensor / BT',
                 price: '54 700 kr',
@@ -234,47 +245,6 @@
                 mileage: '15 853 mil',
                 images: ['images/V40 1.avif'],
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volvo V40 Cross Country D3 - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama<br>Bluetooth<br>Helskinn<br>Värmare<br>Sensorer<br>Navigation<br>Keyless<br>Elstol<br>Farthållare<br>Färddator<br>El speglar<br>Parkera av sig själv<br>Sätesvärme bak<br>Start-/Stopp<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2458kr/år<br>Blandad förbrukning: 5.2L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Kamrem bytt<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-
-            'audi-a5-2012': {
-                title: 'Audi A5 SB 3.0 TDI V6 S Tronic Quattro - Drag / Sensorer',
-                price: '109 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2012',
-                mileage: '22 483 mil',
-                images: Array.from({length: 19}, (_, i) => `images/AA ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi A5 3.0 TDI Quattro - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Dragkrok<br>Sensorer<br>Quattro<br>Värmare<br>Farthållare<br>Färddator<br>Tonade rutor<br>Start-/Stopp<br>Få ägare<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3084kr/år<br>Blandad förbrukning: 5.7L / 100 km<br>Besiktad fram tills - 2027-10-31<br>Sommar och vinterdäck<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Ny servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-
-            'toyota-prius-2008': {
-                title: 'Toyota Prius 1.5 VVT-i + 3CM E-CVT - JBL / Sensorer / Keyless',
-                price: '49 700 kr',
-                fuel: 'Hybrid',
-                gearbox: 'Automatisk',
-                year: '2008',
-                mileage: '24 485 mil',
-                images: [
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/d741a7b3-8279-40c9-8309-e99c65101886',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/3f63245a-4502-4c9d-a5ac-cba4f606057c',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/5031f6a4-74cf-4b4c-8a04-df7fad395267',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/d89671fc-6b9e-4b9c-802e-f39119aa9bed',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/6a6d5bd1-bcd2-403d-b2dd-3451342e938e',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/6a195e4a-7227-4e17-b98c-4a3a2c4f9a0b',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/124a7271-951e-4c15-b2fb-5c36b548d885',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/77acc3aa-9a08-4116-8fac-3bc7a407ae9e',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/32a22050-3994-408e-a8a3-b756d3d932fa',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/82a4a528-4ad4-4401-ab3c-1b64fdfa5a85',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/69b6dc18-2187-44d2-9b29-01f4af60338d',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/33d1e603-2664-4658-8429-fad6d48a18d7',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/7386198f-8a44-4955-bc72-3cf8376e28cb',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/99a21015-c83c-4d8d-aa3d-41026cc4b90c',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/9e52ba4d-3460-40f4-b073-9a1c782c19b2',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/4b07ab8e-5b8e-4d34-94ef-fc1f66c536fc',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/8cb62205-c90f-4394-bd6b-e8c4dd96801b',
-                    'https://images.blocketcdn.se/dynamic/default/item/28109928/a915a57a-9c78-4b2d-bd68-4384c38e44b5'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Toyota Prius 1.5 VVT-i - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Keyless Go<br>Baksensorer <br>JBL Högtalare <br>Elhissar Fram <br>Sätesvärme <br>Farthållare<br>Färddator<br>Elspeglar <br>Start-/Stopp<br>Touch Skärm <br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 360kr/år<br>Blandad Förbrukning: 4.3L / 100 km<br>Besiktad Fram Tills - 2028-01-31<br>Sommar & Vinterdäck <br>Komplett Servicehistorik <br>Ny Servad <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>HPB254'
             },
 
             'volkswagen-golf-i-2016': {
@@ -412,6 +382,17 @@
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi A6 45 TDI Quattro - En exklusiv och rymlig premiumkombi som kombinerar sportig design med fantastisk körkomfort. Den kraftfulla dieselmotorn, fyrhjulsdriften Quattro och den silkeslena Tiptronic-automatlådan ger en körupplevelse utöver det vanliga. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong> <br>Dragkrok <br>Quattro <br>Bluetooth <br>Paddlar <br>Keyless <br>Navigation <br>Adaptiv Farthållare <br>Bränslevärmare - Tidur <br>Elektrisk Bagagelucka<br>ACC Klimatanläggning <br>3-Zons Klimatanläggning <br>Parkeringssensorer  <br>Lane Departure Warning <br>Kollisionsvarning<br>Lane Keeping Aid <br>Start-/Stopp<br>Färddator <br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3531kr/år<br>Blandad förbrukning: 7.3L / 100 km<br>Besiktad fram tills - 2027-12-31<br>Sommar & Vinterdäck på fälg <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Nyligen Servad <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>JXU652'
             },
 
+            'bmw-520d-2020': {
+                title: 'BMW 520d xDrive Touring Steptronic Sport Line - Drag / Skinn / Kamera',
+                price: '279 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2020',
+                mileage: '9 294 mil',
+                images: Array.from({length: 27}, (_, i) => `images/B${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Snygg och välutrustad BMW 520d x-Drive med den perfekta kombinationen av sportig körkänsla och hög komfort. Fyrhjulsdriften ger tryggt väggrepp året runt och bilen erbjuder en premiumkänsla i varje detalj. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>X-Drive<br>Dragkrok<br>Motorvärmare<br>Helskinn Stolar<br>Backkamera<br>Apple CarPlay<br>Parkeringssensorer<br>ACC 2 Klimatzoner<br>Trådlös Telefonladdare<br>Rear Traffic Allert<br>Tonade Rutor<br>Start-/Stopp<br>Rattvärme<br>Keyless<br>Elstolar<br>Isofix<br>BT<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3531kr/år<br>Blandad förbrukning: 4.7L / 100 km<br>Besiktad fram tills - 2027-09-30<br>Sommar & Vinterdäck<br>Komplett servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            },
+
             'mercedes-benz-e220-2014': {
                 title: 'Mercedes-Benz E 220 CDI 7G-Tronic AMG-Line - Pano / Helskinn / Sensorer',
                 price: '179 700 kr',
@@ -449,17 +430,6 @@
                     'https://images.blocketcdn.se/dynamic/default/item/26775407/d290a91b-262f-46d8-b641-fc629384b470'
                 ],
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Mercedes-Benz E220d - Upplev tysk kvalitet med en kraftfull och bränslesnål dieselmotor, smidig 7G-Tronic automatlåda och sportig AMG-design. En bil som kombinerar elegans, komfort och körglädje – perfekt för både vardag och långresor. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong> <br>AMG-Line <br>Panorama <br>Helskinn stolar <br>Sätesvärme fram & bak<br>Parkeringsassistans <br>Parkeringssensorer <br>Adaptiv Farthållare <br>Bluetooth <br>Tonade Rutor <br>Start-/Stopp<br>Elstolar <br>Isofix <br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2146kr/år<br>Blandad förbrukning: 4.7L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar & Vinterdäck på fälg <br>Komplett servicehistorik<br>Komplett nyckelsats <br>Nyligen Servad <br>2 Privat ägare <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>BNH889'
-            },
-
-            'bmw-520d-2020': {
-                title: 'BMW 520d xDrive Touring Steptronic Sport Line - Drag / Skinn / Kamera',
-                price: '279 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2020',
-                mileage: '9 294 mil',
-                images: Array.from({length: 27}, (_, i) => `images/B${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Snygg och välutrustad BMW 520d x-Drive med den perfekta kombinationen av sportig körkänsla och hög komfort. Fyrhjulsdriften ger tryggt väggrepp året runt och bilen erbjuder en premiumkänsla i varje detalj. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>X-Drive<br>Dragkrok<br>Motorvärmare<br>Helskinn Stolar<br>Backkamera<br>Apple CarPlay<br>Parkeringssensorer<br>ACC 2 Klimatzoner<br>Trådlös Telefonladdare<br>Rear Traffic Allert<br>Tonade Rutor<br>Start-/Stopp<br>Rattvärme<br>Keyless<br>Elstolar<br>Isofix<br>BT<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3531kr/år<br>Blandad förbrukning: 4.7L / 100 km<br>Besiktad fram tills - 2027-09-30<br>Sommar & Vinterdäck<br>Komplett servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
 
             'range-rover-sport-2020': {
@@ -522,17 +492,6 @@
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Mercedes-Benz A220 4MATIC - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>AMG - Line<br>4MATIC<br>Sensorer<br>Backkamera<br>Apple CarPlay<br>Touch-Pekskärm<br>Night Package<br>Panelbelysning<br>AMG - Sportratt<br>Soundsystem premium<br>MBUX Multimedia system<br>Sportvinge<br>Bluetooth<br>Navigation<br>Widescreen<br>Farthållare<br>Tonade Rutor<br>Värmare<br>Keyless<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 1570kr/år<br>Blandad förbrukning: 6.9L / 100 km<br>Besiktad fram tills - 2027-05-31<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
 
-            'nissan-micra-2016': {
-                title: 'Nissan Micra 1.2 Euro 6 - Bluetooth / AUX / Årskatt 448kr',
-                price: '49 700 kr',
-                fuel: 'Bensin',
-                gearbox: 'Manuell',
-                year: '2016',
-                mileage: '13 539 mil',
-                images: Array.from({length: 18}, (_, i) => `images/NM ${i+1}.jpg`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Nissan Micra - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Bluetooth<br>Förddator<br>Centrallås<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 448kr/år<br>Blandad förbrukning: 4.9L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar & Vinterdäck<br>Komplett Servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-
             'mercedes-benz-citan-2015': {
                 title: 'Mercedes-Benz Citan 108 CDI Euro 5 - Bluetooth / FarthÃ¥llare / Kamrem Bytt',
                 price: '54 700 kr',
@@ -560,6 +519,17 @@
                     'https://images.blocketcdn.se/dynamic/default/item/27076569/1deed5c0-ba96-498f-b7d4-f791d9e578ce'
                 ],
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Mercedes-Benz Citan – en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både arbete och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong> <br>Bluetooth <br>Färddator <br>Farthållare <br>Sätesvärme fram <br>Centrallås fjärrstyrt <br>AUX<br>Ac<br><br><strong>Övrigt -</strong><br>Skatt: 1520kr/år<br>Blandad förbrukning: 4.3L / 100 km<br>Besiktad fram tills - 2027-11-30<br>Komplett Nyckelsats <br>Kamrem Bytt <br>Nyligen Servad <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>DGY214'
+            },
+
+            'nissan-micra-2016': {
+                title: 'Nissan Micra 1.2 Euro 6 - Bluetooth / AUX / Årskatt 448kr',
+                price: '49 700 kr',
+                fuel: 'Bensin',
+                gearbox: 'Manuell',
+                year: '2016',
+                mileage: '13 539 mil',
+                images: Array.from({length: 18}, (_, i) => `images/NM ${i+1}.jpg`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Nissan Micra - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Bluetooth<br>Förddator<br>Centrallås<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 448kr/år<br>Blandad förbrukning: 4.9L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar & Vinterdäck<br>Komplett Servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
 
             'bmw-535d-2014': {
