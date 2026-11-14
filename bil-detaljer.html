@@ -197,17 +197,6 @@
 
         // Car Data Database
         const cars = {
-            'volvo-v40-cross-country-2014': {
-                title: 'Volvo V40 Cross Country D3 Geartronic Summum - Pano / Sensorer / Navi / Keyless',
-                price: '129 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2014',
-                mileage: '15 853 mil',
-                images: ['images/V40 1.avif'],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volvo V40 Cross Country D3 - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama<br>Bluetooth<br>Helskinn<br>Värmare<br>Sensorer<br>Navigation<br>Keyless<br>Elstol<br>Farthållare<br>Färddator<br>El speglar<br>Parkera av sig själv<br>Sätesvärme bak<br>Start-/Stopp<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2458kr/år<br>Blandad förbrukning: 5.2L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Kamrem bytt<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-
             'peugeot-508-2011': {
                 title: 'Peugeot 508 SW 1.6 e-HDi 110 FAP 8v EGS - Drag / Pano / Sensor / BT',
                 price: '54 700 kr',
@@ -245,6 +234,17 @@
                 mileage: '22 483 mil',
                 images: Array.from({length: 19}, (_, i) => `images/AA ${i+1}.avif`),
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi A5 3.0 TDI Quattro - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Dragkrok<br>Sensorer<br>Quattro<br>Värmare<br>Farthållare<br>Färddator<br>Tonade rutor<br>Start-/Stopp<br>Få ägare<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3084kr/år<br>Blandad förbrukning: 5.7L / 100 km<br>Besiktad fram tills - 2027-10-31<br>Sommar och vinterdäck<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Ny servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            },
+
+            'volvo-v40-cross-country-2014': {
+                title: 'Volvo V40 Cross Country D3 Geartronic Summum - Pano / Sensorer / Navi / Keyless',
+                price: '129 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2014',
+                mileage: '15 853 mil',
+                images: ['images/V40 1.avif'],
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volvo V40 Cross Country D3 - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama<br>Bluetooth<br>Helskinn<br>Värmare<br>Sensorer<br>Navigation<br>Keyless<br>Elstol<br>Farthållare<br>Färddator<br>El speglar<br>Parkera av sig själv<br>Sätesvärme bak<br>Start-/Stopp<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2458kr/år<br>Blandad förbrukning: 5.2L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Kamrem bytt<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
 
             'volkswagen-golf-i-2016': {
@@ -432,6 +432,18 @@
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Snygg och välutrustad BMW 520d x-Drive med den perfekta kombinationen av sportig körkänsla och hög komfort. Fyrhjulsdriften ger tryggt väggrepp året runt och bilen erbjuder en premiumkänsla i varje detalj. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>X-Drive<br>Dragkrok<br>Motorvärmare<br>Helskinn Stolar<br>Backkamera<br>Apple CarPlay<br>Parkeringssensorer<br>ACC 2 Klimatzoner<br>Trådlös Telefonladdare<br>Rear Traffic Allert<br>Tonade Rutor<br>Start-/Stopp<br>Rattvärme<br>Keyless<br>Elstolar<br>Isofix<br>BT<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3531kr/år<br>Blandad förbrukning: 4.7L / 100 km<br>Besiktad fram tills - 2027-09-30<br>Sommar & Vinterdäck<br>Komplett servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
 
+            'range-rover-sport-2020': {
+                title: 'Land Rover Range Rover Sport 3.0 SDV6 AWD HSE - Luft / Pano / Kamera / Unik',
+                price: '539 700 kr',
+                originalPrice: '600 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2020',
+                mileage: '8 630 mil',
+                images: Array.from({length: 30}, (_, i) => `images/RRR ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Range Rover Sport. Elegant, kraftfull och kompromisslös. Denna matt svarta Range Rover Sport 2020 med 3.0 dieselmotor på 249 hk kombinerar exklusiv design, hög komfort och imponerande prestanda. En SUV som drar blickarna till sig och levererar en fantastisk körupplevelse – oavsett om du kör i stan eller på långresa. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama <br>Luftfjädring <br>Apple CarPlay <br>Fyrhjulsdrift <br>Orange Läderklädsel <br>Inbyggd Navigation <br>Backkamera<br>Parkeringssensorer <br>Uppvärmda sidospeglar<br>Elinställbar Ratt<br>Eluppvärmd vindruta<br>Sätesvärme fram & bak<br>Svart innertak<br>Elstolar <br>Keyless <br>Lane assist <br>Start-/stopp<br>Tonade Rutor <br>Färddator <br>Farthållare <br>AUX<br>Isofix<br>Ac<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 6621kr/år<br>Blandad förbrukning: 9.1L / 100 km<br>Besiktad fram tills - 2027-06-30<br>Komplett Servicehistorik <br>Komplett nyckelsats<br>Helt nya sommardäck <br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br><strong>Ring för att säkra att bilen finns på plats då detta är en förmedlingsbil!</strong><br><br>Vi levererar självklart bilen hem till dig!'
+            },
+
             'mercedes-benz-a220-2020': {
                 title: 'Mercedes-Benz A 220 4MATIC Sedan 7G AMG Line - Kamera / Värmare / Navi',
                 price: '309 700 kr',
@@ -478,18 +490,6 @@
                     'https://images.blocketcdn.se/dynamic/default/item/27232495/fcab4b0a-36ab-4d9a-a3a3-b0a8aef59ad0'
                 ],
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen BMW 330d - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama <br>Head-Up Display <br>Parkeringssensorer <br>Digitalt mätarhus <br>HIFI-Ljudsystem <br>El bagagelucka <br>Navigation <br>Helskinn <br>Keyless <br>Bluetooth <br>Cockpit<br>Färddator<br>Farthållare <br>Start-/Stopp <br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2354kr/år<br>Blandad förbrukning: 5.1L / 100 km<br>Besiktad fram tills - 2028-09-30 <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>CXW04H'
-            },
-
-            'range-rover-sport-2020': {
-                title: 'Land Rover Range Rover Sport 3.0 SDV6 AWD HSE - Luft / Pano / Kamera / Unik',
-                price: '539 700 kr',
-                originalPrice: '600 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2020',
-                mileage: '8 630 mil',
-                images: Array.from({length: 30}, (_, i) => `images/RRR ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Range Rover Sport. Elegant, kraftfull och kompromisslös. Denna matt svarta Range Rover Sport 2020 med 3.0 dieselmotor på 249 hk kombinerar exklusiv design, hög komfort och imponerande prestanda. En SUV som drar blickarna till sig och levererar en fantastisk körupplevelse – oavsett om du kör i stan eller på långresa. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama <br>Luftfjädring <br>Apple CarPlay <br>Fyrhjulsdrift <br>Orange Läderklädsel <br>Inbyggd Navigation <br>Backkamera<br>Parkeringssensorer <br>Uppvärmda sidospeglar<br>Elinställbar Ratt<br>Eluppvärmd vindruta<br>Sätesvärme fram & bak<br>Svart innertak<br>Elstolar <br>Keyless <br>Lane assist <br>Start-/stopp<br>Tonade Rutor <br>Färddator <br>Farthållare <br>AUX<br>Isofix<br>Ac<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 6621kr/år<br>Blandad förbrukning: 9.1L / 100 km<br>Besiktad fram tills - 2027-06-30<br>Komplett Servicehistorik <br>Komplett nyckelsats<br>Helt nya sommardäck <br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br><strong>Ring för att säkra att bilen finns på plats då detta är en förmedlingsbil!</strong><br><br>Vi levererar självklart bilen hem till dig!'
             },
 
             'mercedes-benz-citan-2015': {
