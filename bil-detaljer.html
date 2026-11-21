@@ -197,6 +197,162 @@
 
         // Car Data Database
         const cars = {
+            'nissan-micra-2016': {
+                title: 'Nissan Micra 1.2 Euro 6 - Bluetooth / AUX / Årskatt 448kr',
+                price: '49 700 kr',
+                fuel: 'Bensin',
+                gearbox: 'Manuell',
+                year: '2016',
+                mileage: '13 539 mil',
+                images: Array.from({length: 18}, (_, i) => `images/NM ${i+1}.jpg`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Nissan Micra - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Bluetooth<br>Förddator<br>Centrallås<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 448kr/år<br>Blandad förbrukning: 4.9L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar & Vinterdäck<br>Komplett Servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            },
+
+            'bmw-330d-2013': {
+                title: 'BMW 330d Touring Steptronic Euro 5 - Pano / Head-Up / Skinn / Cockpit',
+                price: '149 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2013',
+                mileage: '19 645 mil',
+                images: [
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/4de10c4f-34ff-4f59-a566-17d0c1d0ec39',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/bad6f407-013d-44fc-b641-7610f29b4695',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/ba9288da-a2fb-482a-8ce7-19f85cc80548',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/79155e29-1c96-4777-9298-70d7e9b7c879',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/b9b77243-9b12-4cd3-a05f-b7acbd49a959',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/61997fa4-267a-486b-8c63-f0f9a1f19e40',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/61005890-c340-4983-a4db-c9e0eafd4988',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/93f2cf3a-feeb-4874-a55b-4873995eb105',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/fbdb0373-f8b4-47d6-93e6-731977dd617f',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/d2ea267e-32b7-4b66-b63b-03cde347da29',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/2b1a3a1e-ee1c-4346-b4c4-7a9420ef132a',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/8282db69-f6ef-4f8a-beb7-4e1efa563096',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/c6d78014-c6d1-4faa-bd27-82a38442ee84',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/4d62593c-0928-463c-bf60-6b22dc33e474',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/dbe379f1-fe4c-4797-bf92-298b0fe676d2',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/b91620a2-b662-445a-94eb-52f0b4479eb6',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/c049054a-a17d-4a1a-a765-5c17ce540ac2',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/e4cb7181-083d-4e1e-96f5-0cdebdba6923',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/970aa90e-4b4b-4c1c-9d58-8747a35d1b68',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/208b795c-2159-4d15-9f70-af7fe1d30d37',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/13fc3fb9-340f-40fc-b9b7-c6efbd3a91d3',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/74ecc9a0-6295-4f48-8fd0-8366e47b613c',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/f16cdcd3-0b44-43e5-b5d0-28540f04e976',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/c62e2c9e-86b8-4a27-8309-b4a78fd983ef',
+                    'https://images.blocketcdn.se/dynamic/default/item/27232495/fcab4b0a-36ab-4d9a-a3a3-b0a8aef59ad0'
+                ],
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen BMW 330d - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama <br>Head-Up Display <br>Parkeringssensorer <br>Digitalt mätarhus <br>HIFI-Ljudsystem <br>El bagagelucka <br>Navigation <br>Helskinn <br>Keyless <br>Bluetooth <br>Cockpit<br>Färddator<br>Farthållare <br>Start-/Stopp <br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2354kr/år<br>Blandad förbrukning: 5.1L / 100 km<br>Besiktad fram tills - 2028-09-30 <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>CXW04H'
+            },
+
+            'saab-93-1999': {
+                title: 'Saab 93 5-dörrar 2.0 T SE - Automat / Lågmil / Ny Servad',
+                price: '34 700 kr',
+                fuel: 'Bensin',
+                gearbox: 'Automatisk',
+                year: '1999',
+                mileage: '14 605 mil',
+                images: [
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/a2bb1006-54b4-4379-a4b8-d822eaacff6b',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/cf3b08e2-e7e8-4a74-bc9d-fe02d5e06086',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/5bb13ded-6e53-475e-b8ac-72df9c4d55d8',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/25c5749e-c842-4415-a50a-b6abc9cf169c',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/d380ee4a-b803-4f61-8c23-882b1879a010',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/d755d042-0796-4546-bb89-24bdee1d7854',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/c403d682-6b2d-4bef-b1b4-2bf0ff2634d8',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/0758ef74-b9f6-4b07-8258-9a50a5a45c6a',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/ff75df20-20ea-4505-9d96-36f240ae4c2a',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/46118dde-2367-4fe4-b13f-c7c4522779fa',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/013f909a-9b2f-495c-a1d1-bc8126fb9a18',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/499365ca-f65a-45b4-82ef-87e9ab335dad',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/60700897-63c5-4c7d-bef7-1f80dca8e063',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/b4d7d172-8c95-4ca5-b281-0da454451859',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/3472c29f-9208-45e7-8bdf-3a6302fbf493',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/974fd85c-1d5e-4f23-a9aa-3b0ed9b76f1c',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/dd2522c0-7ebf-41e0-a18b-f7c0e6046f2a',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/2f2812b7-e388-4741-8da8-29fdd4c08559',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/7f0268d2-1b77-438e-a10b-21870a1743e8',
+                    'https://images.blocketcdn.se/dynamic/default/item/27925689/1186693a-978d-4dd7-b216-8573cf9f53d0'
+                ],
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Saab 9-3 2.0 T - Klassisk Saab 9-3 från 1999 med automatlåda! En bekväm och rymlig bil med härlig körkänsla. Perfekt för dig som söker en prisvärd bil med både komfort och karaktär.. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Automat <br>Lågmil <br>Elhissar Fram & Bak<br>Centrallås - Fjärrstyrt <br>Sätesvärme <br>Kamkedja<br>Färddator <br>Stöldlarm <br>Isofix <br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2199kr/år<br>Blandad Förbrukning: 9.6L / 100 km<br>Besiktad Fram Tills - 2027-12-31<br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Ny Servad <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>ESD588'
+            },
+
+            'volkswagen-golf-i-2016': {
+                title: 'Volkswagen Golf I 5-door GTI Performance 2.0 TSI BMT - Pano/Drag/Kamera',
+                price: '149 700 kr',
+                fuel: 'Bensin',
+                gearbox: 'Automatisk',
+                year: '2016',
+                mileage: '19 159 mil',
+                images: [
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/ade636ab-a6e9-4d07-9307-46a46027b947',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/f6ba6150-940f-433e-a1e8-1fce62905a57',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/77e7f58a-f77b-40cf-8ff2-c3601944faf4',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/2f93d074-d229-4a05-83fa-9124f49b3fc4',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/b3fcb22d-b207-41ab-b1c7-19a0008119e6',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/329b26cc-564c-4472-a49f-e489c836a189',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/ad57fc2c-e578-477a-b5eb-6fcc330a9ce4',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/64c00a72-2a68-4088-bf76-691b40d27258',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/c30b80c8-d35f-4dfd-b70b-40c15c9c5ce6',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/b64a1a7b-cdc5-44ed-9876-2aaf5fe4e07d',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/52224201-62cd-4554-b066-ae9c4540acfe',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/3e564650-e64c-4287-9717-9c202fe10ec9',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/8bb0acb6-754d-4580-9b62-63c8864189e0',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/9fd65664-e22d-4a72-8385-61be8e435ca7',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/33b03bfe-11f3-4d30-96dc-af136a557b36',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/a5a74e88-a6c1-4f94-a142-85eabc751010',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/9ed80969-4e90-4df8-9aba-62a041e345fa',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/464c200e-affa-412f-88cd-3765d037fb7e',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/9f760c86-9237-489b-ad23-8f66becc951a',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/d39bbd92-fbeb-40fa-b184-b195270431a1',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/a9193998-851d-4682-aab3-68fb5cdc0b83',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/a27eca1d-a0c2-4d2d-b653-a0784f121e1e',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/6342efa3-deac-4199-9ca0-d457410e6ba4',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/ee6e31d9-b04b-475e-abab-3cbbf221b07b',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/edbaabb2-bf70-455f-972f-cbae46bf1421',
+                    'https://images.blocketcdn.se/dynamic/default/item/27966080/400fca0c-4594-4594-87ad-24cdd7c1afec'
+                ],
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volkswagen Golf GTI - Sportig, stilren och full av attityd! Med hela 230 hästkrafter levererar denna Golf GTI en perfekt kombination av prestanda, komfort och körglädje. En riktig blickfångare som är lika rolig att köra som snygg att se på!. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong> <br>Panorama <br>Dragkrok <br>Backkamera <br>Navigation <br>Apple CarPlay<br>Svart Innertak <br>Bluetooth <br>Paddlar <br>Parkeringssensorer <br>Touch-/Pekskärm <br>Tonade Rutor <br>Start-/Stopp<br>Sportstolar <br>Färddator <br>Laptimer <br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 1152kr/år<br>Blandad Förbrukning: 6.4L / 100 km<br>Besiktad Fram Tills - 2027-12-31<br>Sommar & Vinterdäck på fälg <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>JGX355'
+            },
+
+            'audi-a6-2019': {
+                title: 'Audi A6 Avant 45 TDI quattro TipTronic - Drag / Navi / Värmare',
+                price: '249 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2019',
+                mileage: '17 371 mil',
+                images: [
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/239f9ec0-6d93-457b-89cc-a49efa4f8772',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/9a494335-9e03-4696-bcda-da319a900525',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/0ca0095b-cb11-4c4b-a80a-939db1a56ca0',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/510f6f6c-00d2-4620-90d8-1a60e1119304',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/6a14b203-39ca-48c7-b6e5-dd8143e6dfbe',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/352b6f6c-7110-4e3a-8286-56dc2417cd79',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/b94fbb16-c0c8-4409-97e7-bbcdad8f22eb',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/68d12522-59ef-4d4e-a254-29e93c9c0045',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/b6e8c1cc-fc52-43b7-ae26-2ded9e4fb055',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/3257fba4-513b-42b9-ba38-1606f06582ea',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/15209df8-2e28-445e-9329-420d79b6f9bb',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/f1d87fb4-a1d0-4a1d-8b87-4d3b8646d6e5',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/8eb75bf6-ff57-4d9e-9f8a-b200e13e73f5',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/a30a7cf9-5967-4632-b03b-356324b13f1b',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/e53a1762-b863-46e7-ac70-41c5fe65c2ac',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/d19e65e3-6f69-49bd-8cc3-af4fd3a261b4',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/9c589d61-6ce9-4745-84c9-71d9f169f1b3',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/45ed5e0a-f021-4e55-abf3-dee7338d404a',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/0689c0ae-d7fa-4943-91ce-d133293684b1',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/7cbb5272-f9e9-4ba9-a8d3-bcad39b0cdb3',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/fa8e1a4f-f6d8-4dff-88a7-b60d3c55dcd4',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/78304a1d-0165-4086-b79e-d9aaef20bf45',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/91e702a5-71a6-424a-a3c0-f922e970662f',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/00aa96ba-d2fb-4705-bc6b-21a5ae53b666',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/b2cb99d8-3791-406d-98e7-d7ef22b49a86',
+                    'https://images.blocketcdn.se/dynamic/default/item/27799088/f9a3d656-fb6d-473e-a172-195e29e68f40'
+                ],
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi A6 45 TDI Quattro - En exklusiv och rymlig premiumkombi som kombinerar sportig design med fantastisk körkomfort. Den kraftfulla dieselmotorn, fyrhjulsdriften Quattro och den silkeslena Tiptronic-automatlådan ger en körupplevelse utöver det vanliga. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong> <br>Dragkrok <br>Quattro <br>Bluetooth <br>Paddlar <br>Keyless <br>Navigation <br>Adaptiv Farthållare <br>Bränslevärmare - Tidur <br>Elektrisk Bagagelucka<br>ACC Klimatanläggning <br>3-Zons Klimatanläggning <br>Parkeringssensorer  <br>Lane Departure Warning <br>Kollisionsvarning<br>Lane Keeping Aid <br>Start-/Stopp<br>Färddator <br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3531kr/år<br>Blandad förbrukning: 7.3L / 100 km<br>Besiktad fram tills - 2027-12-31<br>Sommar & Vinterdäck på fälg <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Nyligen Servad <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>JXU652'
+            },
+
             'citroen-c5-2014': {
                 title: 'Citroën C5 Tourer 2.2 HDi Euro 5 - Drag/Kamera/Värmare/Massage/BT',
                 price: '79 700 kr',
@@ -344,6 +500,35 @@
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Mercedes-Benz CLS 350 4MATIC - <br>En elegant och kraftfull Mercedes med exklusiv design, fantastisk körkomfort och en stark V6-dieselmotor. Med automatlåda och 4MATIC fyrhjulsdrift får du en trygg och följsam körupplevelse året om. En perfekt kombination av prestanda, komfort och premiumkänsla som verkligen sticker ut på vägarna. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>AMG Line <br>4MATIC<br>Taklucka <br>Helskinn <br>Parkeringssensorer <br>Värmare - Tidur <br>Navigation <br>Elstolar <br>Paddlar <br>Färddator<br>Farthållare <br>Start-/Stopp<br>Tonade Rutor <br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 4648kr/år<br>Blandad Förbrukning: 6.7L / 100 km<br>Besiktad Fram Tills - 2027-10-31<br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>NWD894'
             },
 
+            'citroen-c1-2014': {
+                title: 'Citroën C1 5-dÃ¶rrar 1.2 VTi Euro 5 - Bluetooth / AC / 360kr Ã…rsskatt',
+                price: '44 700 kr',
+                fuel: 'Bensin',
+                gearbox: 'Manuell',
+                year: '2014',
+                mileage: '11 240 mil',
+                images: [
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/06dac991-6d81-44c6-b2c9-6fb0d63cfed4',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/4bc1172e-ffec-453b-adb7-4fb03416bd0a',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/cb413d38-4b00-46d0-ac43-bc5c535cd302',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/01fac7fd-f365-42b9-8a55-f80b28d6cbb6',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/fc2ca65e-f646-40b0-8c27-3944320b3ae2',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/e9c733f7-5617-4828-a4fa-5dd2a1381b33',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/f1a67a42-0f86-4423-bce5-fe60d987c7d6',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/e488dab3-70e3-48dd-8b1e-f9c8257b27a1',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/15921ec4-37fa-48f2-9de1-df8809a7a64d',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/cb3cd6cc-e22a-4104-9aec-18f0ce7624b6',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/ecd92061-d547-4980-b5ea-968ac06ce02b',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/e063ab7b-fd16-4227-a150-0f03e44562c5',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/95c6ddb7-0adc-4d37-ac6a-53f454f71d76',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/6fc82cf0-b333-4d9d-90a0-3a1c9bd1ca43',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/6688e0a3-a1af-4d17-a430-15dc3463abb5',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/b702b3e3-d119-4325-b979-3fae2ac50a6c',
+                    'https://images.blocketcdn.se/dynamic/default/item/27370371/007e6c78-d0b7-4d8b-9677-1b5d2869328e'
+                ],
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Citroën C1 1.2 VTI - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Bluetooth <br>Sätesvärme <br>Färddator<br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 360kr/år<br>Blandad Förbrukning: 4.3L / 100 km<br>Besiktad Fram Tills - 2027-05-31<br>Sommar & Vinterdäck <br>Komplett Servicehistorik <br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>EKJ497'
+            },
+
             'mercedes-benz-c63-amg-2016': {
                 title: 'Mercedes-Benz C 63 S CoupÃ© AMG 640HK - Pano / Catless / Kolfiber / 360 / Navi',
                 price: '499 700 kr',
@@ -384,35 +569,6 @@
                     'https://images.blocketcdn.se/dynamic/default/item/27232748/aa4ceb56-1997-4fca-ad00-f19dab894874'
                 ],
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Mercedes-Benz C63S 640HK! Fullspecad C63 S för dig som vill ha något utöver det vanliga. 640 hästar, catless downpipes och custom avgassystem som ger ett helt brutalt V8-ljud. Fullutrustad, brutal prestanda och ett ljud som måste upplevas på plats. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong> <br>640HK<br>Catless <br>Custom Avgassystem <br>360 Kamera <br>Panorama <br>Navigation <br>Kolfiber paket <br>Luftfjädring <br>Backkamera <br>Helskinn Stolar <br>Parkeringsassistans <br>Elektrisk justerbar ratt <br>Parkeringssensorer  <br>Elektronisk bagagelucka <br>Sportstolar <br>Tonade Rutor <br>Start-/Stopp<br>Bluetooth <br>Farthållare <br>IWC Klocka <br>Elstolar <br>Keyless <br>Isofix <br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2318kr/år<br>Blandad förbrukning: 8.6L / 100 km<br>Besiktad fram tills - 2027-08-31<br>Komplett Servicehistorik<br>Helt Nya Bromsar <br>Nyligen Servad <br><br>*Export Possible*<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>RBF37T'
-            },
-
-            'citroen-c1-2014': {
-                title: 'Citroën C1 5-dÃ¶rrar 1.2 VTi Euro 5 - Bluetooth / AC / 360kr Ã…rsskatt',
-                price: '44 700 kr',
-                fuel: 'Bensin',
-                gearbox: 'Manuell',
-                year: '2014',
-                mileage: '11 240 mil',
-                images: [
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/06dac991-6d81-44c6-b2c9-6fb0d63cfed4',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/4bc1172e-ffec-453b-adb7-4fb03416bd0a',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/cb413d38-4b00-46d0-ac43-bc5c535cd302',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/01fac7fd-f365-42b9-8a55-f80b28d6cbb6',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/fc2ca65e-f646-40b0-8c27-3944320b3ae2',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/e9c733f7-5617-4828-a4fa-5dd2a1381b33',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/f1a67a42-0f86-4423-bce5-fe60d987c7d6',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/e488dab3-70e3-48dd-8b1e-f9c8257b27a1',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/15921ec4-37fa-48f2-9de1-df8809a7a64d',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/cb3cd6cc-e22a-4104-9aec-18f0ce7624b6',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/ecd92061-d547-4980-b5ea-968ac06ce02b',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/e063ab7b-fd16-4227-a150-0f03e44562c5',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/95c6ddb7-0adc-4d37-ac6a-53f454f71d76',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/6fc82cf0-b333-4d9d-90a0-3a1c9bd1ca43',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/6688e0a3-a1af-4d17-a430-15dc3463abb5',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/b702b3e3-d119-4325-b979-3fae2ac50a6c',
-                    'https://images.blocketcdn.se/dynamic/default/item/27370371/007e6c78-d0b7-4d8b-9677-1b5d2869328e'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Citroën C1 1.2 VTI - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Bluetooth <br>Sätesvärme <br>Färddator<br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 360kr/år<br>Blandad Förbrukning: 4.3L / 100 km<br>Besiktad Fram Tills - 2027-05-31<br>Sommar & Vinterdäck <br>Komplett Servicehistorik <br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>EKJ497'
             },
 
             'mercedes-benz-citan-2015': {
@@ -488,15 +644,15 @@
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen BMW M3 G81 Touring utöver det vanliga. Den välkända M-prestandan kombineras här med 700 HK vilket ger bilen en helt annan nivå av kraft och körglädje. Samtidigt behåller den allt det som gör G81 så attraktiv – sportig design, hög komfort och imponerande praktikalitet. För dig som söker en bil med rätt kombination av prestanda, exklusivitet och användbarhet. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Steg 1 - 700 HK<br>X-Drive <br>360 kamera <br>CSL Grill<br>Gula DRL<br>H&R Sänkfjädrar <br>BMW Laserljus <br>Parkeringssensorer <br>Head Up Display <br>Harman & Kardon<br>Connected Drive Services <br>M-Performance bälten <br>M-Performance mittarmstöd<br>M-Performace stolsrygg kolfiber <br>M-Performance Sportratt <br>Apple CarPlay <br>Kolfiber interiör <br>Kolfiber Bak diffuser <br>Fram läpp <br>Navigation <br>Keyless Go<br>Farthållare <br>AUX<br>Isofix<br>Ac<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 19 966kr/år<br>Blandad förbrukning: 10.1L / 100 km<br>Levereras Nybesiktad <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br><strong>Endast tidsbokade visningar på detta fordon då det är en förmedlingsbil!</strong><br><br>Vi levererar självklart bilen hem till dig!'
             },
 
-            'volvo-v40-cross-country-2014': {
-                title: 'Volvo V40 Cross Country D3 Geartronic Summum - Pano / Sensorer / Navi / Keyless',
-                price: '129 700 kr',
+            'audi-a5-2012': {
+                title: 'Audi A5 SB 3.0 TDI V6 S Tronic Quattro - Drag / Sensorer',
+                price: '109 700 kr',
                 fuel: 'Diesel',
                 gearbox: 'Automatisk',
-                year: '2014',
-                mileage: '15 853 mil',
-                images: ['images/V40 1.avif'],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volvo V40 Cross Country D3 - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama<br>Bluetooth<br>Helskinn<br>Värmare<br>Sensorer<br>Navigation<br>Keyless<br>Elstol<br>Farthållare<br>Färddator<br>El speglar<br>Parkera av sig själv<br>Sätesvärme bak<br>Start-/Stopp<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2458kr/år<br>Blandad förbrukning: 5.2L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Kamrem bytt<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+                year: '2012',
+                mileage: '22 483 mil',
+                images: Array.from({length: 19}, (_, i) => `images/AA ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi A5 3.0 TDI Quattro - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Dragkrok<br>Sensorer<br>Quattro<br>Värmare<br>Farthållare<br>Färddator<br>Tonade rutor<br>Start-/Stopp<br>Få ägare<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3084kr/år<br>Blandad förbrukning: 5.7L / 100 km<br>Besiktad fram tills - 2027-10-31<br>Sommar och vinterdäck<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Ny servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
 
             'peugeot-508-2011': {
@@ -527,53 +683,15 @@
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Pegeout 508 1.6 e-HDI SW - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Dragkrok <br>Panorama <br>Växelpaddlar <br>Sensorer Bak<br>Bluetooth<br>Färddator<br>Farthållare <br>Start-/Stopp<br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 1103kr/år<br>Blandad Förbrukning: 4.3L / 100 km<br>Besiktad Fram Tills - 2027-03-31<br>Sommar & Vinterdäck På Fälg <br>Komplett Servicehistorik <br>Kamrem Bytt<br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>LPW873'
             },
 
-            'audi-a5-2012': {
-                title: 'Audi A5 SB 3.0 TDI V6 S Tronic Quattro - Drag / Sensorer',
-                price: '109 700 kr',
+            'volvo-v40-cross-country-2014': {
+                title: 'Volvo V40 Cross Country D3 Geartronic Summum - Pano / Sensorer / Navi / Keyless',
+                price: '129 700 kr',
                 fuel: 'Diesel',
                 gearbox: 'Automatisk',
-                year: '2012',
-                mileage: '22 483 mil',
-                images: Array.from({length: 19}, (_, i) => `images/AA ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi A5 3.0 TDI Quattro - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Dragkrok<br>Sensorer<br>Quattro<br>Värmare<br>Farthållare<br>Färddator<br>Tonade rutor<br>Start-/Stopp<br>Få ägare<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3084kr/år<br>Blandad förbrukning: 5.7L / 100 km<br>Besiktad fram tills - 2027-10-31<br>Sommar och vinterdäck<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Ny servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-
-            'volkswagen-golf-i-2016': {
-                title: 'Volkswagen Golf I 5-door GTI Performance 2.0 TSI BMT - Pano/Drag/Kamera',
-                price: '159 700 kr',
-                fuel: 'Bensin',
-                gearbox: 'Automatisk',
-                year: '2016',
-                mileage: '19 159 mil',
-                images: [
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/ade636ab-a6e9-4d07-9307-46a46027b947',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/f6ba6150-940f-433e-a1e8-1fce62905a57',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/77e7f58a-f77b-40cf-8ff2-c3601944faf4',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/2f93d074-d229-4a05-83fa-9124f49b3fc4',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/b3fcb22d-b207-41ab-b1c7-19a0008119e6',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/329b26cc-564c-4472-a49f-e489c836a189',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/ad57fc2c-e578-477a-b5eb-6fcc330a9ce4',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/64c00a72-2a68-4088-bf76-691b40d27258',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/c30b80c8-d35f-4dfd-b70b-40c15c9c5ce6',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/b64a1a7b-cdc5-44ed-9876-2aaf5fe4e07d',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/52224201-62cd-4554-b066-ae9c4540acfe',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/3e564650-e64c-4287-9717-9c202fe10ec9',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/8bb0acb6-754d-4580-9b62-63c8864189e0',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/9fd65664-e22d-4a72-8385-61be8e435ca7',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/33b03bfe-11f3-4d30-96dc-af136a557b36',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/a5a74e88-a6c1-4f94-a142-85eabc751010',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/9ed80969-4e90-4df8-9aba-62a041e345fa',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/464c200e-affa-412f-88cd-3765d037fb7e',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/9f760c86-9237-489b-ad23-8f66becc951a',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/d39bbd92-fbeb-40fa-b184-b195270431a1',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/a9193998-851d-4682-aab3-68fb5cdc0b83',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/a27eca1d-a0c2-4d2d-b653-a0784f121e1e',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/6342efa3-deac-4199-9ca0-d457410e6ba4',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/ee6e31d9-b04b-475e-abab-3cbbf221b07b',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/edbaabb2-bf70-455f-972f-cbae46bf1421',
-                    'https://images.blocketcdn.se/dynamic/default/item/27966080/400fca0c-4594-4594-87ad-24cdd7c1afec'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volkswagen Golf GTI - Sportig, stilren och full av attityd! Med hela 230 hästkrafter levererar denna Golf GTI en perfekt kombination av prestanda, komfort och körglädje. En riktig blickfångare som är lika rolig att köra som snygg att se på!. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong> <br>Panorama <br>Dragkrok <br>Backkamera <br>Navigation <br>Apple CarPlay<br>Svart Innertak <br>Bluetooth <br>Paddlar <br>Parkeringssensorer <br>Touch-/Pekskärm <br>Tonade Rutor <br>Start-/Stopp<br>Sportstolar <br>Färddator <br>Laptimer <br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 1152kr/år<br>Blandad Förbrukning: 6.4L / 100 km<br>Besiktad Fram Tills - 2027-12-31<br>Sommar & Vinterdäck på fälg <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>JGX355'
+                year: '2014',
+                mileage: '15 853 mil',
+                images: ['images/V40 1.avif'],
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Volvo V40 Cross Country D3 - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama<br>Bluetooth<br>Helskinn<br>Värmare<br>Sensorer<br>Navigation<br>Keyless<br>Elstol<br>Farthållare<br>Färddator<br>El speglar<br>Parkera av sig själv<br>Sätesvärme bak<br>Start-/Stopp<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2458kr/år<br>Blandad förbrukning: 5.2L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Komplett Nyckelsats<br>Kamrem bytt<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
 
             'ford-fusion-2008': {
@@ -603,76 +721,6 @@
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Ford Fusion 1.4 TDCI - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Lågmil<br>Elhissar Fram <br>Sätesvärme <br>Färddator<br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 1572kr/år<br>Blandad Förbrukning: 4.4L / 100 km<br>Besiktad Fram Tills - 2028-01-31<br>Sommar & Vinterdäck <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Kamrem Bytt<br>Ny Servad <br>2 Ägare<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>COH890'
             },
 
-            'saab-93-1999': {
-                title: 'Saab 93 5-dörrar 2.0 T SE - Automat / Lågmil / Ny Servad',
-                price: '39 700 kr',
-                fuel: 'Bensin',
-                gearbox: 'Automatisk',
-                year: '1999',
-                mileage: '14 605 mil',
-                images: [
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/a2bb1006-54b4-4379-a4b8-d822eaacff6b',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/cf3b08e2-e7e8-4a74-bc9d-fe02d5e06086',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/5bb13ded-6e53-475e-b8ac-72df9c4d55d8',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/25c5749e-c842-4415-a50a-b6abc9cf169c',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/d380ee4a-b803-4f61-8c23-882b1879a010',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/d755d042-0796-4546-bb89-24bdee1d7854',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/c403d682-6b2d-4bef-b1b4-2bf0ff2634d8',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/0758ef74-b9f6-4b07-8258-9a50a5a45c6a',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/ff75df20-20ea-4505-9d96-36f240ae4c2a',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/46118dde-2367-4fe4-b13f-c7c4522779fa',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/013f909a-9b2f-495c-a1d1-bc8126fb9a18',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/499365ca-f65a-45b4-82ef-87e9ab335dad',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/60700897-63c5-4c7d-bef7-1f80dca8e063',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/b4d7d172-8c95-4ca5-b281-0da454451859',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/3472c29f-9208-45e7-8bdf-3a6302fbf493',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/974fd85c-1d5e-4f23-a9aa-3b0ed9b76f1c',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/dd2522c0-7ebf-41e0-a18b-f7c0e6046f2a',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/2f2812b7-e388-4741-8da8-29fdd4c08559',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/7f0268d2-1b77-438e-a10b-21870a1743e8',
-                    'https://images.blocketcdn.se/dynamic/default/item/27925689/1186693a-978d-4dd7-b216-8573cf9f53d0'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Saab 9-3 2.0 T - Klassisk Saab 9-3 från 1999 med automatlåda! En bekväm och rymlig bil med härlig körkänsla. Perfekt för dig som söker en prisvärd bil med både komfort och karaktär.. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Automat <br>Lågmil <br>Elhissar Fram & Bak<br>Centrallås - Fjärrstyrt <br>Sätesvärme <br>Kamkedja<br>Färddator <br>Stöldlarm <br>Isofix <br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2199kr/år<br>Blandad Förbrukning: 9.6L / 100 km<br>Besiktad Fram Tills - 2027-12-31<br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Ny Servad <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>ESD588'
-            },
-
-            'audi-a6-2019': {
-                title: 'Audi A6 Avant 45 TDI quattro TipTronic - Drag / Navi / Värmare',
-                price: '259 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2019',
-                mileage: '17 371 mil',
-                images: [
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/239f9ec0-6d93-457b-89cc-a49efa4f8772',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/9a494335-9e03-4696-bcda-da319a900525',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/0ca0095b-cb11-4c4b-a80a-939db1a56ca0',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/510f6f6c-00d2-4620-90d8-1a60e1119304',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/6a14b203-39ca-48c7-b6e5-dd8143e6dfbe',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/352b6f6c-7110-4e3a-8286-56dc2417cd79',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/b94fbb16-c0c8-4409-97e7-bbcdad8f22eb',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/68d12522-59ef-4d4e-a254-29e93c9c0045',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/b6e8c1cc-fc52-43b7-ae26-2ded9e4fb055',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/3257fba4-513b-42b9-ba38-1606f06582ea',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/15209df8-2e28-445e-9329-420d79b6f9bb',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/f1d87fb4-a1d0-4a1d-8b87-4d3b8646d6e5',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/8eb75bf6-ff57-4d9e-9f8a-b200e13e73f5',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/a30a7cf9-5967-4632-b03b-356324b13f1b',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/e53a1762-b863-46e7-ac70-41c5fe65c2ac',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/d19e65e3-6f69-49bd-8cc3-af4fd3a261b4',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/9c589d61-6ce9-4745-84c9-71d9f169f1b3',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/45ed5e0a-f021-4e55-abf3-dee7338d404a',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/0689c0ae-d7fa-4943-91ce-d133293684b1',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/7cbb5272-f9e9-4ba9-a8d3-bcad39b0cdb3',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/fa8e1a4f-f6d8-4dff-88a7-b60d3c55dcd4',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/78304a1d-0165-4086-b79e-d9aaef20bf45',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/91e702a5-71a6-424a-a3c0-f922e970662f',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/00aa96ba-d2fb-4705-bc6b-21a5ae53b666',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/b2cb99d8-3791-406d-98e7-d7ef22b49a86',
-                    'https://images.blocketcdn.se/dynamic/default/item/27799088/f9a3d656-fb6d-473e-a172-195e29e68f40'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Audi A6 45 TDI Quattro - En exklusiv och rymlig premiumkombi som kombinerar sportig design med fantastisk körkomfort. Den kraftfulla dieselmotorn, fyrhjulsdriften Quattro och den silkeslena Tiptronic-automatlådan ger en körupplevelse utöver det vanliga. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong> <br>Dragkrok <br>Quattro <br>Bluetooth <br>Paddlar <br>Keyless <br>Navigation <br>Adaptiv Farthållare <br>Bränslevärmare - Tidur <br>Elektrisk Bagagelucka<br>ACC Klimatanläggning <br>3-Zons Klimatanläggning <br>Parkeringssensorer  <br>Lane Departure Warning <br>Kollisionsvarning<br>Lane Keeping Aid <br>Start-/Stopp<br>Färddator <br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3531kr/år<br>Blandad förbrukning: 7.3L / 100 km<br>Besiktad fram tills - 2027-12-31<br>Sommar & Vinterdäck på fälg <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Nyligen Servad <br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>JXU652'
-            },
-
             'bmw-520d-2020': {
                 title: 'BMW 520d xDrive Touring Steptronic Sport Line - Drag / Skinn / Kamera',
                 price: '279 700 kr',
@@ -682,55 +730,6 @@
                 mileage: '9 294 mil',
                 images: Array.from({length: 27}, (_, i) => `images/B${i+1}.avif`),
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Snygg och välutrustad BMW 520d x-Drive med den perfekta kombinationen av sportig körkänsla och hög komfort. Fyrhjulsdriften ger tryggt väggrepp året runt och bilen erbjuder en premiumkänsla i varje detalj. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>X-Drive<br>Dragkrok<br>Motorvärmare<br>Helskinn Stolar<br>Backkamera<br>Apple CarPlay<br>Parkeringssensorer<br>ACC 2 Klimatzoner<br>Trådlös Telefonladdare<br>Rear Traffic Allert<br>Tonade Rutor<br>Start-/Stopp<br>Rattvärme<br>Keyless<br>Elstolar<br>Isofix<br>BT<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 3531kr/år<br>Blandad förbrukning: 4.7L / 100 km<br>Besiktad fram tills - 2027-09-30<br>Sommar & Vinterdäck<br>Komplett servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
-            },
-
-            'range-rover-sport-2020': {
-                title: 'Land Rover Range Rover Sport 3.0 SDV6 AWD HSE - Luft / Pano / Kamera / Unik',
-                price: '539 700 kr',
-                originalPrice: '600 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2020',
-                mileage: '8 630 mil',
-                images: Array.from({length: 30}, (_, i) => `images/RRR ${i+1}.avif`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Range Rover Sport. Elegant, kraftfull och kompromisslös. Denna matt svarta Range Rover Sport 2020 med 3.0 dieselmotor på 249 hk kombinerar exklusiv design, hög komfort och imponerande prestanda. En SUV som drar blickarna till sig och levererar en fantastisk körupplevelse – oavsett om du kör i stan eller på långresa. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama <br>Luftfjädring <br>Apple CarPlay <br>Fyrhjulsdrift <br>Orange Läderklädsel <br>Inbyggd Navigation <br>Backkamera<br>Parkeringssensorer <br>Uppvärmda sidospeglar<br>Elinställbar Ratt<br>Eluppvärmd vindruta<br>Sätesvärme fram & bak<br>Svart innertak<br>Elstolar <br>Keyless <br>Lane assist <br>Start-/stopp<br>Tonade Rutor <br>Färddator <br>Farthållare <br>AUX<br>Isofix<br>Ac<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 6621kr/år<br>Blandad förbrukning: 9.1L / 100 km<br>Besiktad fram tills - 2027-06-30<br>Komplett Servicehistorik <br>Komplett nyckelsats<br>Helt nya sommardäck <br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br><strong>Ring för att säkra att bilen finns på plats då detta är en förmedlingsbil!</strong><br><br>Vi levererar självklart bilen hem till dig!'
-            },
-
-            'bmw-330d-2013': {
-                title: 'BMW 330d Touring Steptronic Euro 5 - Pano / Head-Up / Skinn / Cockpit',
-                price: '149 700 kr',
-                fuel: 'Diesel',
-                gearbox: 'Automatisk',
-                year: '2013',
-                mileage: '19 645 mil',
-                images: [
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/4de10c4f-34ff-4f59-a566-17d0c1d0ec39',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/bad6f407-013d-44fc-b641-7610f29b4695',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/ba9288da-a2fb-482a-8ce7-19f85cc80548',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/79155e29-1c96-4777-9298-70d7e9b7c879',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/b9b77243-9b12-4cd3-a05f-b7acbd49a959',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/61997fa4-267a-486b-8c63-f0f9a1f19e40',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/61005890-c340-4983-a4db-c9e0eafd4988',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/93f2cf3a-feeb-4874-a55b-4873995eb105',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/fbdb0373-f8b4-47d6-93e6-731977dd617f',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/d2ea267e-32b7-4b66-b63b-03cde347da29',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/2b1a3a1e-ee1c-4346-b4c4-7a9420ef132a',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/8282db69-f6ef-4f8a-beb7-4e1efa563096',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/c6d78014-c6d1-4faa-bd27-82a38442ee84',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/4d62593c-0928-463c-bf60-6b22dc33e474',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/dbe379f1-fe4c-4797-bf92-298b0fe676d2',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/b91620a2-b662-445a-94eb-52f0b4479eb6',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/c049054a-a17d-4a1a-a765-5c17ce540ac2',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/e4cb7181-083d-4e1e-96f5-0cdebdba6923',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/970aa90e-4b4b-4c1c-9d58-8747a35d1b68',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/208b795c-2159-4d15-9f70-af7fe1d30d37',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/13fc3fb9-340f-40fc-b9b7-c6efbd3a91d3',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/74ecc9a0-6295-4f48-8fd0-8366e47b613c',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/f16cdcd3-0b44-43e5-b5d0-28540f04e976',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/c62e2c9e-86b8-4a27-8309-b4a78fd983ef',
-                    'https://images.blocketcdn.se/dynamic/default/item/27232495/fcab4b0a-36ab-4d9a-a3a3-b0a8aef59ad0'
-                ],
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen BMW 330d - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama <br>Head-Up Display <br>Parkeringssensorer <br>Digitalt mätarhus <br>HIFI-Ljudsystem <br>El bagagelucka <br>Navigation <br>Helskinn <br>Keyless <br>Bluetooth <br>Cockpit<br>Färddator<br>Farthållare <br>Start-/Stopp <br>Isofix <br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 2354kr/år<br>Blandad förbrukning: 5.1L / 100 km<br>Besiktad fram tills - 2028-09-30 <br>Komplett Servicehistorik <br>Komplett Nyckelsats <br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!<br><br>Öppettider:<br>Mån-Fre: 10.00 - 19.00<br>Lör: 10.00 - 17.00<br>Sön: 12.00 - 17.00<br><br>Marieborgsgatan 1 C<br>641 39 Katrineholm<br>0721768908<br><br>Hjärtligt Välkomna önskar vi er hos A&M Auto!<br><br>Av handlare angivet registreringsnummer -<br>CXW04H'
             },
 
             'mercedes-benz-a220-2020': {
@@ -744,15 +743,16 @@
                 description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Mercedes-Benz A220 4MATIC - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>AMG - Line<br>4MATIC<br>Sensorer<br>Backkamera<br>Apple CarPlay<br>Touch-Pekskärm<br>Night Package<br>Panelbelysning<br>AMG - Sportratt<br>Soundsystem premium<br>MBUX Multimedia system<br>Sportvinge<br>Bluetooth<br>Navigation<br>Widescreen<br>Farthållare<br>Tonade Rutor<br>Värmare<br>Keyless<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 1570kr/år<br>Blandad förbrukning: 6.9L / 100 km<br>Besiktad fram tills - 2027-05-31<br>Sommar och vinterdäck på fälg<br>Komplett Servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
             },
 
-            'nissan-micra-2016': {
-                title: 'Nissan Micra 1.2 Euro 6 - Bluetooth / AUX / Årskatt 448kr',
-                price: '49 700 kr',
-                fuel: 'Bensin',
-                gearbox: 'Manuell',
-                year: '2016',
-                mileage: '13 539 mil',
-                images: Array.from({length: 18}, (_, i) => `images/NM ${i+1}.jpg`),
-                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Nissan Micra - en bränslesnål och pålitlig bil med låg ägandekostnad. Perfekt för både familj och pendling. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Bluetooth<br>Förddator<br>Centrallås<br>Isofix<br>AUX<br>AC<br><br><strong>Övrigt -</strong><br>Skatt: 448kr/år<br>Blandad förbrukning: 4.9L / 100 km<br>Besiktad fram tills - 2027-02-28<br>Sommar & Vinterdäck<br>Komplett Servicehistorik<br>Komplett nyckelsats<br>Nyligen Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br>Vi levererar självklart bilen hem till dig!'
+            'range-rover-sport-2020': {
+                title: 'Land Rover Range Rover Sport 3.0 SDV6 AWD HSE - Luft / Pano / Kamera / Unik',
+                price: '539 700 kr',
+                originalPrice: '600 700 kr',
+                fuel: 'Diesel',
+                gearbox: 'Automatisk',
+                year: '2020',
+                mileage: '8 630 mil',
+                images: Array.from({length: 30}, (_, i) => `images/RRR ${i+1}.avif`),
+                description: 'Välkommen till oss på A&M Auto Katrineholm!<br><br>Nyinkommen Range Rover Sport. Elegant, kraftfull och kompromisslös. Denna matt svarta Range Rover Sport 2020 med 3.0 dieselmotor på 249 hk kombinerar exklusiv design, hög komfort och imponerande prestanda. En SUV som drar blickarna till sig och levererar en fantastisk körupplevelse – oavsett om du kör i stan eller på långresa. Hos A&M Auto får du dessutom förmånlig finansiering via MyMoney Pay och möjlighet till räntefri avbetalningsplan. Vi erbjuder även 6-36 månaders garanti för en tryggare affär!<br><br><strong>Följande Utrustning -</strong><br>Panorama <br>Luftfjädring <br>Apple CarPlay <br>Fyrhjulsdrift <br>Orange Läderklädsel <br>Inbyggd Navigation <br>Backkamera<br>Parkeringssensorer <br>Uppvärmda sidospeglar<br>Elinställbar Ratt<br>Eluppvärmd vindruta<br>Sätesvärme fram & bak<br>Svart innertak<br>Elstolar <br>Keyless <br>Lane assist <br>Start-/stopp<br>Tonade Rutor <br>Färddator <br>Farthållare <br>AUX<br>Isofix<br>Ac<br>BT<br><br><strong>Övrigt -</strong><br>Skatt: 6621kr/år<br>Blandad förbrukning: 9.1L / 100 km<br>Besiktad fram tills - 2027-06-30<br>Komplett Servicehistorik <br>Komplett nyckelsats<br>Helt nya sommardäck <br>Ny Servad<br><br>Varmt välkommen till oss på A&M Auto i Katrineholm. Hos oss hittar du noggrant testade och kvalitetssäkrade begagnade bilar. Funderar du på att byta in din nuvarande bil? Hör gärna av dig så återkommer vi snabbt med ett konkurrenskraftigt inbytespris!<br><br><strong>Ring för att säkra att bilen finns på plats då detta är en förmedlingsbil!</strong><br><br>Vi levererar självklart bilen hem till dig!'
             },
 
             'bmw-535d-2014': {
